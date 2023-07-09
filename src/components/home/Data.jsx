@@ -1,9 +1,8 @@
-
 const Data = () => {
   return (
     <div className="home__data">
       <h1 className="home__title">
-        Ibrahim Ibrahim
+        Ibrahim
         <svg
           width="36"
           height="36"
@@ -86,6 +85,6 @@ const Data = () => {
       </a>
     </div>
   );
-}
+};
 
-export default Data
+export default Data;
