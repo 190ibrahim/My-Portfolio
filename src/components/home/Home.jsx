@@ -1,8 +1,23 @@
+import "./home.css";
+import Social from "./Social";
+import Data from "./Data";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <section className="home section" id="home">
+      <div className="home__container container grid">
+        <div className="home__content grid">
+          <Social />
 
-export default Home
+          <div className="home__img"></div>
+
+          <Data />
+        </div>
+
+        
+      </div>
+    </section>
+  );
+};
+
+export default Home;
