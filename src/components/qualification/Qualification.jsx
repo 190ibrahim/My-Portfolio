@@ -3,11 +3,16 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { useState } from "react";
-import timelineElements from "./timelineElements";
 import "react-vertical-timeline-component/style.min.css";
+import EducationData from "./EducationData";
+import ExperienceData from "./ExperienceDataData";
 import "./qualification.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faSchool, faStar } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBriefcase,
+  faGraduationCap,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
 
 
 const workIcon = {
@@ -15,7 +20,7 @@ const workIcon = {
   iconStyle: { background: '#fff', color: 'black' },
 };
 const schoolIcon = {
-  icon: <FontAwesomeIcon icon={faSchool} />,
+  icon: <FontAwesomeIcon icon={faGraduationCap} />,
   iconStyle: { background: "#fff", color: "black" },
 };
 
@@ -72,14 +77,14 @@ const Qualification = () => {
             }
           >
             <VerticalTimeline lineColor=" var(--text-color)">
-              {timelineElements.map((element) => {
+              {EducationData.map((element) => {
                 return (
                   <VerticalTimelineElement
                     key={element.key}
                     date={element.date}
                     dateClassName="qualification__data"
-                    icon={workIcon.icon}
-                    iconStyle={workIcon.iconStyle}
+                    icon={schoolIcon.icon}
+                    iconStyle={schoolIcon.iconStyle}
                   >
                     <h3 className="qualification__title">{element.title}</h3>
                     <h5 className="qualification__subtitle">
@@ -103,7 +108,32 @@ const Qualification = () => {
                 ? "qualification__content qualification__content-active"
                 : "qualification__content"
             }
-          ></div>
+          >
+            <VerticalTimeline lineColor=" var(--text-color)">
+              {ExperienceData.map((element) => {
+                return (
+                  <VerticalTimelineElement
+                    key={element.key}
+                    date={element.date}
+                    dateClassName="qualification__data"
+                    icon={workIcon.icon}
+                    iconStyle={workIcon.iconStyle}
+                  >
+                    <h3 className="qualification__title">{element.title}</h3>
+                    <h5 className="qualification__subtitle">
+                      {element.location}
+                    </h5>
+                    <p id="description">{element.description}</p>
+                  </VerticalTimelineElement>
+                );
+              })}
+              <VerticalTimelineElement
+                icon={starIcon.icon}
+                iconStyle={starIcon.iconStyle}
+                className="no-content"
+              />
+            </VerticalTimeline>
+          </div>
         </div>
       </div>
     </section>
