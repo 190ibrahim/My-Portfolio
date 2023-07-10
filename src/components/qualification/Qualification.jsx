@@ -87,8 +87,10 @@ const Qualification = () => {
                     iconStyle={schoolIcon.iconStyle}
                   >
                     <h3 className="qualification__title">{element.title}</h3>
+
                     <h5 className="qualification__subtitle">
-                      {element.location}
+                      <i className="bx bxs-school"></i> {element.institution},
+                      <i className="bx bx-map"></i> {element.location}
                     </h5>
                     <p id="description">{element.description}</p>
                   </VerticalTimelineElement>
@@ -121,7 +123,8 @@ const Qualification = () => {
                   >
                     <h3 className="qualification__title">{element.title}</h3>
                     <h5 className="qualification__subtitle">
-                      {element.location}
+                      <i className="bx bxs-school"></i> {element.institution},
+                      <i className="bx bx-map"></i> {element.location}
                     </h5>
                     <p id="description">{element.description}</p>
                   </VerticalTimelineElement>
