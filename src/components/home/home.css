@@ -25,7 +25,7 @@
 }
 
 .home__title {
-  font-size: var(--big-font-size);
+  font-size: 3rem;
   margin-bottom: var(--mb-0-25);
 }
 
