@@ -48,6 +48,25 @@ let PortfolioData = [
     ],
     icon: "uil-ticket",
   },
+  {
+    title: "EventifyUP<br />App",
+    project: "EventifyUP",
+    description: `A team Project where me and other three students collaborated to build this EventifyUP, 
+      a web-based platform designed to simplify the event ticketing process and purchase tickets for events at the University of Pécs.
+      EventifyUp eliminates the need for traditional paper tickets
+      and offers a streamlined and secure digital ticketing experience.`,
+    features: [
+      "Built with Laravel and Angular",
+      "Unit testing",
+      "Calender integaration to dispaly all the events",
+      "Event Search Functionality",
+      "Admin Dashboard to implement CRUD on users and events",
+      "Simple and intuitive event registration process.",
+      "Responsive and mobile-friendly interface.",
+      "Demonstrated project management, software development, and collaborative teamwork skills.",
+    ],
+    icon: "uil-ticket",
+  },
 ];
 
 

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./portfolio.css";
 import PortfolioData from "./portfolioData ";
-
 const Portfolio = () => {
   const [toggleState, setToggleState] = useState(0);
 
@@ -17,6 +16,7 @@ const Portfolio = () => {
       <div className="services__container container grid">
         {PortfolioData.map((item, index) => (
           <div className="services__content" key={index}>
+            
             <div>
               <i className={`uil ${item.icon} services__icon`}></i>
               <h3
