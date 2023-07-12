@@ -1,4 +1,3 @@
-import React from "react";
 import "./footer.css";
 
 const Footer = () => {
@@ -23,8 +22,8 @@ const Footer = () => {
           </li>
 
           <li>
-            <a href="#testimonials" className="footer__link">
-              Testimonials
+            <a href="#skills" className="footer__link">
+              My CV
             </a>
           </li>
         </ul>
@@ -59,7 +58,7 @@ const Footer = () => {
         </div>
 
         <span className="footer__copy">
-          &#169; Crypticalcoder. All rigths reserved
+          &#169;  All rigths reserved
         </span>
       </div>
     </footer>
