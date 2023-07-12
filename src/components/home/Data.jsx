@@ -58,9 +58,7 @@ const Data = () => {
 
       <p className="home__description">
         Highly motivated and detail-oriented second-year computer science
-        student seeking an intern or trainee position. Proficient in a range of
-        programming languages, with strong skills in software development, and a
-        self-starter mentality with good team player skills.
+        student seeking an intern or trainee position.
       </p>
 
       <a href="#contact" className="button button--flex">
