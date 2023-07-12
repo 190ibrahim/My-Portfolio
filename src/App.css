@@ -85,6 +85,7 @@ textarea {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+  
 }
 
 h1,
@@ -168,6 +169,26 @@ img {
   display: inline-flex;
   align-items: center;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, var(--title-color));
+    border-radius: 6px;
+    height: 150px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, var(--title-color-dark));}
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */

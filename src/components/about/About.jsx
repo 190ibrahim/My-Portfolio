@@ -5,7 +5,7 @@ import Info from "./Info";
 
 const About = () => {
   return (
-    <section className="about section" id="about" >
+    <section className="about section" id="about">
       <h2 className="section__title">About Me</h2>
       <span className="section__subtitle">My introduction</span>
 
@@ -16,11 +16,15 @@ const About = () => {
           <Info />
 
           <p className="about__description">
-            Frontend developer, I create web pages with UI / UX user interface,
-            I have years of experience and many clients are happy with the
-            projects carried out. I have years of experience and many clients
-            are happy with the projects carried out. I have years of experience
-            and many clients are happy with the projects carried out.
+            Software Engineer with expertise in multiple
+            programming languages. I have strong skills in software development
+            and a self-starter mentality, along with excellent team player
+            abilities. I am thrilled about any opportunity to work closely with
+            cross-functional team members and collaborate with various teams
+            within an organization. My goal is to create supporting tools,
+            establish best practices, and continually enhance my technical
+            competence. By actively engaging in such
+            collaborations, I aim to foster my personal and professional growth.
           </p>
 
           <a download="" href={CV} className="button button--flex">
