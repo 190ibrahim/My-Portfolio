@@ -12,6 +12,7 @@ let PortfolioData = [
       "Image uploading and management",
     ],
     icon: "uil-web-grid",
+    repository: "https://github.com/190ibrahim/CMS",
   },
   {
     title: "Trip4Life<br />App",
@@ -28,6 +29,7 @@ let PortfolioData = [
       "The application uses prepared statements to prevent SQL injection attacks",
     ],
     icon: "uil-compass",
+    repository: "https://github.com/190ibrahim/Trip4Life",
   },
   {
     title: "EventifyUP<br />App",
@@ -39,17 +41,16 @@ let PortfolioData = [
     features: [
       "Built with Laravel and Angular",
       "Unit testing",
-      "Calender integaration to dispaly all the events",
+      "Calendar integration to display all the events",
       "Event Search Functionality",
       "Admin Dashboard to implement CRUD on users and events",
-      "Simple and intuitive event registration process.",
-      "Responsive and mobile-friendly interface.",
-      "Demonstrated project management, software development, and collaborative teamwork skills.",
+      "Simple and intuitive event registration process",
+      "Responsive and mobile-friendly interface",
+      "Demonstrated project management, software development, and collaborative teamwork skills",
     ],
     icon: "uil-ticket",
+    repository: "https://github.com/190ibrahim/EventifyPecs-Angular--Laravel",
   },
-
 ];
 
-
-export default PortfolioData ;
+export default PortfolioData;

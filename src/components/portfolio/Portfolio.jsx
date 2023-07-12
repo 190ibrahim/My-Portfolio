@@ -16,7 +16,6 @@ const Portfolio = () => {
       <div className="services__container container grid">
         {PortfolioData.map((item, index) => (
           <div className="services__content" key={index}>
-            
             <div>
               <i className={`uil ${item.icon} services__icon`}></i>
               <h3
@@ -59,6 +58,16 @@ const Portfolio = () => {
                     </li>
                   ))}
                 </ul>
+
+                <a
+                  href={item.repository}
+                  className="project__button"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View on GitHub
+                  <i className="uil uil-external-link-alt services__button-icon"></i>
+                </a>
               </div>
             </div>
           </div>
