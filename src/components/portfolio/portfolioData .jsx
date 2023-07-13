@@ -16,7 +16,7 @@ let PortfolioData = [
   },
   {
     title: "Trip4Life<br />App",
-    project: "Content Management System",
+    project: "Trip4Life App",
     description:
       "Trip4Life is a web-based application that allows users to plan and book sailing trips to various destinations.",
     features: [
@@ -50,6 +50,25 @@ let PortfolioData = [
     ],
     icon: "uil-ticket",
     repository: "https://github.com/190ibrahim/EventifyPecs-Angular--Laravel",
+  },
+  {
+    title: "Ping Pong <br /> Game",
+    project: "Ping Pong Game",
+    description: `A web-based Ping Pong game application developed as part of a web application team project.
+      This web app leverages dynamic loading of modules to enhance modularity and optimize resource loading.`,
+    features: [
+      "Built with native javascript, HTML, and CSS",
+      "Modular architecture for maintainability and reusability",
+      "Single-player and multiplayer modes",
+      "Object-Oriented Programming (OOP) structure",
+      "Used requestAnimationFrame(), ensuring smooth gameplay and consistent frame rate.",
+      "Used Canvas API, allowing for efficient and dynamic graphics rendering.",
+      "Collision Detection: The ball-paddle and ball-edge collision detection is implemented using mathematical calculations and logical conditions.",
+      "The dynamically imported module is instantiated as an object, providing encapsulated functionality for each game application.",
+    ],
+    icon: "uil-table-tennis",
+    demoURL: `https://190ibrahim.github.io/Web-Application-Project/`,
+    repository: "https://github.com/190ibrahim/Web-Application-Project",
   },
 ];
 

@@ -42,7 +42,11 @@
 .services__button:hover .services__button-icon {
     transform: translateX(00.25rem);
 }
-
+.project__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .project__button {
     color: var(--title-color);
     margin-top: var(--mb-2);
@@ -52,6 +56,9 @@
     column-gap: 0.25rem;
     cursor: pointer;
     font-weight: var(--font-medium);
+    margin-left: 10px;
+    margin-right: 10px;
+
 }
 
 .project__button-icon {

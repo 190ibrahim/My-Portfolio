@@ -44,12 +44,10 @@ const Portfolio = () => {
                   onClick={() => toggleTab(0)}
                   className="uil uil-times services__modal-close"
                 ></i>
-
                 <h3 className="services__modal-title">{item.project}</h3>
                 <p className="services__modal-description">
                   {item.description}
                 </p>
-
                 <ul className="services__modal-services grid">
                   {item.features.map((feature, featureIndex) => (
                     <li className="services__modal-service" key={featureIndex}>
@@ -58,16 +56,28 @@ const Portfolio = () => {
                     </li>
                   ))}
                 </ul>
-
-                <a
-                  href={item.repository}
-                  className="project__button"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  View on GitHub
-                  <i className="uil uil-external-link-alt services__button-icon"></i>
-                </a>
+                <div className="project__buttons">
+                  <a
+                    href={item.repository}
+                    className="project__button"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    View on GitHub
+                    <i className="uil uil-external-link-alt services__button-icon"></i>
+                  </a>
+                  {item.demoURL && (
+                    <a
+                      href={item.demoURL}
+                      className="project__button"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      View Demo
+                      <i className="uil uil-external-link-alt services__button-icon"></i>
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>
