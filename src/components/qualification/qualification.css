@@ -12,7 +12,7 @@
 .qualification__button {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
-    color: var(--title-color);
+    color: var(--text-color);
     margin: 0 var(--mb-1);
     cursor: pointer;
 }
@@ -62,25 +62,6 @@
     margin-bottom: var(--mb-1);
 }
 
-.qualification__calender {
-    font-size: var(--small-font-size);
-}
-
-.qualification__rounder {
-    display: inline-block;
-    width: 13px;
-    height: 13px;
-    background-color: var(--text-color);
-    border-radius: 50%;
-}
-
-.qualification__line {
-    display: block;
-    width: 1px;
-    height: 100%;
-    background-color:black!important;
-    transform: translate(6px, -7px);
-}
 
 
 .vertical-timeline-element-content {
