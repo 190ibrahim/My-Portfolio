@@ -14,7 +14,8 @@
   --text-color: hsl(var(--hue), var(--sat), 46%);
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: #fff;
-
+  --toastify-color-progress-success: hsl(var(--hue), var(--sat), 46%);
+  --toastify-icon-color-success: hsl(var(--hue), var(--sat), 46%);
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
 

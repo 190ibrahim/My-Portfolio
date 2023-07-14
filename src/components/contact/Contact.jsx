@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./contact.css";
 
 const Contact = () => {
@@ -8,12 +10,33 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      "service_tqeyvis",
-      "template_tjqk72v",
-      form.current,
-      "CW_ZIUmNo8Vqf3Q2R"
-    );
+    emailjs
+      .sendForm(
+        "service_tqeyvis",
+        "template_tjqk72v",
+        form.current,
+        "CW_ZIUmNo8Vqf3Q2R"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success("Email sent successfully!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            progressClassName: "toast-progress",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error("Failed to send email.");
+        }
+      );
     e.target.reset();
   };
 
@@ -142,6 +165,12 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <ToastContainer
+        style={{
+          "--toastify-color-progress-success": "var(--text-color)",
+          "--toastify-icon-color-success": "var(--title-color)",
+        }}
+      />
     </section>
   );
 };
