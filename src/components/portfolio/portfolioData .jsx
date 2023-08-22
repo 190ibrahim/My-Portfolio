@@ -70,6 +70,21 @@ let PortfolioData = [
     demoURL: `https://190ibrahim.github.io/Web-Application-Project/`,
     repository: "https://github.com/190ibrahim/Web-Application-Project",
   },
+
+  {
+    title: "File Organizer Automation",
+    project: "File Organizer Automation",
+    description:
+      "A Python script to automatically organize files based on their types into separate folders.The script effectively streamlined my file management process. With a few clicks, I was able to transform my disorganized downloads folder into a well-structured repository.",
+    features: [
+      "Sorts files into different folders based on file types",
+      "Supports a variety of file extensions",
+      "Removes empty folders after organizing files",
+      "Enhances file organization and cleanliness",
+    ],
+    icon: "uil-file-alt",
+    repository: "https://github.com/190ibrahim/File-Organization-Automation",
+  },
 ];
 
 export default PortfolioData;

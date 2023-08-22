@@ -5,13 +5,13 @@ const Info = () => {
       <div className="about__box">
         <i className="bx bxs-graduation about__icon"></i>
         <h3 className="about__title">Currently in </h3>
-        <span className="about__subtitle">4th Semester </span>
+        <span className="about__subtitle">5th Semester </span>
       </div>
 
       <div className="about__box">
         <i className="bx bxs-badge-check about__icon"></i>
         <h3 className="about__title">Completed</h3>
-        <span className="about__subtitle">18 + Projects</span>
+        <span className="about__subtitle">20 + Projects</span>
       </div>
 
       <div className="about__box">

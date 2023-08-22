@@ -57,7 +57,7 @@ const Data = () => {
       <h3 className="home__subtitle">Software Engineer</h3>
 
       <p className="home__description">
-        Highly motivated and detail-oriented second-year computer science
+        Highly motivated and detail-oriented third-year computer science
         student seeking an intern or trainee position.
       </p>
 
