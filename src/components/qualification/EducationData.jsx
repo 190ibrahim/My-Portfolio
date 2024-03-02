@@ -6,7 +6,7 @@ let EducationData = [
     location: "Pécs, Hungary",
     description: `Stipendium Hungaricum scholarship recipient, due to my high school 
       performance my country nominated me for the Stipendium Hungaricum scholarship.`,
-    date: "August 2021 - present",
+    date: "August 2021 - June 2024",
   },
   {
     id: 2,
