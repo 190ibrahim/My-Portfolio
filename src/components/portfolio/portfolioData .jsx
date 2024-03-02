@@ -85,6 +85,20 @@ let PortfolioData = [
     icon: "uil-file-alt",
     repository: "https://github.com/190ibrahim/File-Organization-Automation",
   },
+{
+  title: "Football Data <br /> Analysis",
+  project: "Football Data Analysis",
+  description: "Exploration of player statistics, team performance, and trends in football using data visualization and analytical techniques.",
+  features: [
+    "Gathered and cleaned data from Transfermarkt", 
+    "Analyzed Transfermarkt dataset to uncover insights into player stats, team performance, and football analytics.",
+    "Data visualization techniques to  present complex findings",
+    "Explored features like player age distribution, performance trends, and valuation metrics"
+  ],
+  icon: "uil-football", 
+  repository: "https://github.com/190ibrahim/Football_data_analysis-" 
+},
+
 ];
 
 export default PortfolioData;
