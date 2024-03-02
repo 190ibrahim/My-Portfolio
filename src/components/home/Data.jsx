@@ -54,7 +54,7 @@ const Data = () => {
         </svg>
       </h1>
 
-      <h3 className="home__subtitle">Software Engineer</h3>
+      <h3 className="home__subtitle">Automation & Data engineer</h3>
 
       <p className="home__description">
         Highly motivated and detail-oriented third-year computer science
