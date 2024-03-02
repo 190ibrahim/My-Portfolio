@@ -16,15 +16,7 @@ const About = () => {
           <Info />
 
           <p className="about__description">
-            Software Engineer with expertise in multiple
-            programming languages. I have strong skills in software development
-            and a self-starter mentality, along with excellent team player
-            abilities. I am thrilled about any opportunity to work closely with
-            cross-functional team members and collaborate with various teams
-            within an organization. My goal is to create supporting tools,
-            establish best practices, and continually enhance my technical
-            competence. By actively engaging in such
-            collaborations, I aim to foster my personal and professional growth.
+            Hi there! I'm Ibrahim, a Computer Science student always excited to dive into the next coding challenge. From building web applications to tinkering with machine learning models, I love the process of bringing ideas to life with code. I'm particularly passionate about finding ways to use data for good. This portfolio is a snapshot of my projects, skills, and ongoing journey as a developer and data engineer.  Let's connect!
           </p>
 
           <a download="" href={CV} className="button button--flex">
