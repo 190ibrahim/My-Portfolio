@@ -1,6 +1,16 @@
 let ExperienceData = [
   {
     id: 1,
+    title: "Automation & Data Engineer",
+    institution: "DATelite Informatics Ltd",
+    location: "Pécs, Hungary",
+    description: `Designed and executed ETL processes, developing Python functions for discrete ETL steps.
+Implemented statistical modeling and visualization plotting to derive meaningful insights from data.
+Applied piecewise regression, Kruskal algorithm and Discrete optimization for earth observation`,
+    date: "October 2023 - Present",
+  },
+  {
+    id: 2,
     title: "Stipendium Hungaricum Mentor",
     institution: "University Of Pécs",
     location: "Pécs, Hungary",
