@@ -98,7 +98,90 @@ let PortfolioData = [
   icon: "uil-football", 
   repository: "https://github.com/190ibrahim/Football_data_analysis-" 
 },
-
+{
+  title: "Stereo Visual<br />Odometry",
+  project: "Stereo Visual Odometry",
+  description: "Designed a visual odometry pipeline using stereo camera images for motion estimation.",
+  features: [
+    "Extracted key points and tracked features across frames",
+    "Estimated camera motion in 3D space using epipolar geometry",
+    "Implemented in Python with OpenCV and NumPy"
+  ],
+  icon: "uil-camera",
+  repository: "https://github.com/190ibrahim/Computer_Vision_Stereo_Visual_Odometer",
+},
+{
+  title: "Feature Extraction<br /> & Image Registration",
+  project: "Feature Extraction & Image Registration",
+  description: "Developed a feature-based image registration pipeline using SIFT, ORB, and RANSAC.",
+  features: [
+    "Extracted key points and descriptors",
+    "Applied transformation matrices for image alignment",
+    "Used OpenCV and NumPy for implementation"
+  ],
+  icon: "uil-image",
+  repository: "https://github.com/190ibrahim/Computer_Vision_Feature_Extraction_and_Image_Registration",
+},
+{
+  title: "Map-Based Localization<br /> using EKF",
+  project: "Map-Based Localization using EKF",
+  description: "Implemented an Extended Kalman Filter for accurate robot localization using landmark-based measurements.",
+  features: [
+    "Designed motion and measurement models",
+    "Performed real-time state estimation",
+    "Implemented in Python with NumPy and Matplotlib"
+  ],
+  icon: "uil-map",
+  repository: "https://github.com/190ibrahim/Map_Based_Localization_EKF",
+},
+{
+  title: "Particle Filter<br /> Robot Localization",
+  project: "Particle Filter Robot Localization",
+  description: "Developed a Particle Filter for estimating a robot’s position based on sensor data and motion models.",
+  features: [
+    "Implemented particle sampling and resampling",
+    "Used motion and observation models",
+    "Developed in Python using NumPy and Matplotlib"
+  ],
+  icon: "uil-robot",
+  repository: "https://github.com/190ibrahim/Particl_Filter_Robot_Localization-",
+},
+{
+  title: "Explainable AI<br /> (XAI)",
+  project: "Explainable AI (XAI)",
+  description: "Developed techniques to improve transparency and interpretability of machine learning models.",
+  features: [
+    "Implemented SHAP, LIME, and Grad-CAM",
+    "Analyzed feature importance and model decisions",
+    "Applied XAI methods to deep learning models"
+  ],
+  icon: "uil-brain",
+  repository: "https://github.com/190ibrahim/Explainable_AI",
+},
+{
+  title: "Reinforcement Learning<br /> for Robotics",
+  project: "Reinforcement Learning for Robotics",
+  description: "Implemented Deep Q-Learning (DQN) and Policy Gradient methods for robotic control.",
+  features: [
+    "Trained an agent to navigate an environment",
+    "Applied reward-based learning for decision making",
+    "Used TensorFlow and OpenAI Gym"
+  ],
+  icon: "uil-graph-bar",
+  repository: "https://github.com/190ibrahim/Reinforcement_Learning",
+},
+{
+  title: "MLFFs for<br /> Transition Metal Complexes",
+  project: "MLFFs for Transition Metal Complexes (BSc Thesis)",
+  description: "Developed machine learning models to predict the HOMO-LUMO gap in transition metal complexes.",
+  features: [
+    "Trained models on the tmQM dataset",
+    "Used XGBoost and Neural Networks for predictions",
+    "Achieved an MSE of 0.0004 with XGBoost"
+  ],
+  icon: "uil-flask",
+  repository: "https://github.com/190ibrahim/MLFFs_Transition_Metal_Complexes_BSc_Thesis",
+}
 ];
 
 export default PortfolioData;
