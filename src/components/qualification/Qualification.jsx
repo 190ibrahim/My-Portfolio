@@ -80,19 +80,19 @@ const Qualification = () => {
               {EducationData.map((element) => {
                 return (
                   <VerticalTimelineElement
-                    key={element.key}
-                    date={element.date}
-                    dateClassName="qualification__data"
-                    icon={schoolIcon.icon}
-                    iconStyle={schoolIcon.iconStyle}
+                  key={element.key}
+                  date={element.date}
+                  dateClassName="qualification__data"
+                  icon={schoolIcon.icon}
+                  iconStyle={schoolIcon.iconStyle}
                   >
-                    <h3 className="qualification__title">{element.title}</h3>
+                  <h3 className="qualification__title">{element.title}</h3>
 
-                    <h5 className="qualification__subtitle">
-                      <i className="bx bxs-school"></i> {element.institution},
-                      <i className="bx bx-map"></i> {element.location}
-                    </h5>
-                    <p id="description">{element.description}</p>
+                  <h5 className="qualification__subtitle">
+                  <i className="bx bxs-school"></i> {element.institution}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <i className="bx bx-map"></i> {element.location}
+                  </h5>
+                  <p id="description">{element.description}</p>
                   </VerticalTimelineElement>
                 );
               })}

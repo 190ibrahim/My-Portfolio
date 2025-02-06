@@ -54,11 +54,10 @@ const Data = () => {
         </svg>
       </h1>
 
-      <h3 className="home__subtitle">Automation & Data engineer</h3>
+      <h3 className="home__subtitle">MSc Field Robotics Student</h3>
 
       <p className="home__description">
-        Highly motivated and detail-oriented third-year computer science
-        student seeking an intern or trainee position.
+      Erasmus Mundus Scholarship awardee, specializing in robotics, artificial intelligence, and autonomous systems, skilled in ROS, Python and machine learning, seeking a research or engineering role in the field of robotics.
       </p>
 
       <a href="#contact" className="button button--flex">

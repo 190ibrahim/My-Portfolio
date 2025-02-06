@@ -1,5 +1,5 @@
 import "./about.css";
-import AboutImg from "../../assets/profile.jpeg";
+import AboutImg from "../../assets/profile.jpg";
 import CV from "../../assets/Ibrahim-CV.pdf";
 import Info from "./Info";
 
@@ -16,7 +16,9 @@ const About = () => {
           <Info />
 
           <p className="about__description">
-            Hi there! I'm Ibrahim, a Computer Science student always excited to dive into the next coding challenge. From building web applications to tinkering with machine learning models, I love the process of bringing ideas to life with code. I'm particularly passionate about finding ways to use data for good. This portfolio is a snapshot of my projects, skills, and ongoing journey as a developer and data engineer.  Let's connect!
+            Hi there! I'm Ibrahim, a Passionate robotics student with a strong background in computer science and a master's in Intelligent Field Robotic Systems.
+Skilled in motion planning, computer vision, and autonomous systems, with hands-on experience in ROS, ML, and robotic
+simulation. Seeking research or engineering roles in autonomous systems and AI-driven robotics. Let's connect!
           </p>
 
           <a download="" href={CV} className="button button--flex">
