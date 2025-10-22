@@ -2,11 +2,11 @@ let EducationData = [
   {
     id: 1,
     title: "MSc Erasmus Mundus Joint Master in Field Robotics",
-    institution: "University of Girona; University of Zagreb; Eötvös Loránd University",
-    location: "Girona, Spain; Zagreb, Croatia; Budapest, Hungary",
+    institution: "University of Girona / University of Zagreb",
+    location: "Girona, Spain / Zagreb, Croatia",
     description: `
       The first two semesters in Girona provide a solid foundation in field robotics, focusing on land and marine robots. 
-      In the third semester, students can choose between specializing in multiple robots and aerial vehicles at the University of Zagreb, or autonomous systems and self-driving land vehicles at Eötvös Loránd University in Budapest. 
+      In the third semester, specializing in multiple robots and aerial vehicles at the University of Zagreb.
       The final semester is dedicated to a master's thesis.`,
     date: "September 2024 - Present",
   },

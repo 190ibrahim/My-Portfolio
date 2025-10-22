@@ -1,5 +1,61 @@
 let PortfolioData = [
   {
+  title: "Exploration with<br />Global–Local Planning",
+  project: "Exploration with Global–Local Planning Architecture",
+  description:
+    "Developed a hybrid exploration framework integrating frontier detection for goal generation with global and local planning strategies in ROS.",
+  features: [
+    "Implemented a global RRT* planner and local DWA controller for autonomous navigation.",
+    "Developed frontier clustering, centroid extraction, and viewpoint validation for efficient exploration.",
+    "Optimized path smoothing and waypoint reduction for improved coverage in occupancy grid maps.",
+  ],
+  icon: "uil-compass",
+  repository: "https://github.com/190ibrahim/Exploration_Global_Local_Planning",
+},
+
+{
+  title: "Vehicle–Manipulator<br />System",
+  project: "Vehicle–Manipulator System",
+  description:
+    "Implemented a control architecture for coordinated motion between a mobile base and a manipulator for autonomous intervention tasks.",
+  features: [
+    "Designed a behavior tree–based control structure in ROS for multi-task coordination.",
+    "Developed kinematics and task-priority controllers for precise end-effector control.",
+    "Integrated ArUco marker detection for visual feedback and autonomous pick-and-place operations.",
+  ],
+  icon: "uil-robot",
+  repository: "https://github.com/190ibrahim/Vehicle_Manipulator_System",
+},
+
+{
+  title: "Graph SLAM<br />with Line Features",
+  project: "Graph SLAM with Line Features",
+  description:
+    "Implemented a Graph SLAM system using line features extracted from LiDAR scans for improved localization and mapping.",
+  features: [
+    "Combined EKF-based pose estimation with LiDAR-derived line features for robust localization.",
+    "Developed a line perception node using split-and-merge segmentation and covariance estimation.",
+    "Built a custom GTSAM factor graph with pose and observation factors for trajectory optimization.",
+  ],
+  icon: "uil-map-marker",
+  repository: "https://github.com/190ibrahim/Graph_SLAM_Line_Features",
+},
+
+{
+  title: "Sparsely Annotated<br />UXO Segmentation",
+  project: "Sparsely Annotated UXO Segmentation",
+  description:
+    "Built a weakly supervised semantic segmentation pipeline for detecting unexploded ordnance (UXO) using limited pixel annotations.",
+  features: [
+    "Implemented Tree Energy Loss (TEL) and class-weighted cross-entropy for handling extreme class imbalance.",
+    "Designed preprocessing and augmentation pipelines including patch extraction and photometric transforms.",
+    "Trained and compared multiple deep learning models to evaluate segmentation performance on sparse labels.",
+  ],
+  icon: "uil-brain",
+  repository: "https://github.com/190ibrahim/Sparsely_Annotated_UXO_Segmentation",
+},
+
+  {
     title: "Content<br />Management System",
     project: "Content Management System",
     description:

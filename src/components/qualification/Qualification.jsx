@@ -78,21 +78,37 @@ const Qualification = () => {
           >
             <VerticalTimeline lineColor=" var(--text-color)">
               {EducationData.map((element) => {
+                const sentences = element.description
+                  ? element.description
+                      .split('.')
+                      .map(s => s.trim())
+                      .filter(s => s.length > 0)
+                  : [];
+
                 return (
                   <VerticalTimelineElement
-                  key={element.key}
-                  date={element.date}
-                  dateClassName="qualification__data"
-                  icon={schoolIcon.icon}
-                  iconStyle={schoolIcon.iconStyle}
+                    key={element.id}
+                    date={element.date}
+                    dateClassName="qualification__data"
+                    icon={schoolIcon.icon}
+                    iconStyle={schoolIcon.iconStyle}
                   >
-                  <h3 className="qualification__title">{element.title}</h3>
+                    <h3 className="qualification__title">{element.title}</h3>
 
-                  <h5 className="qualification__subtitle">
-                  <i className="bx bxs-school"></i> {element.institution}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <i className="bx bx-map"></i> {element.location}
-                  </h5>
-                  <p id="description">{element.description}</p>
+                    <h5 className="qualification__subtitle">
+                      <i className="bx bxs-school"></i> {element.institution}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <i className="bx bx-map"></i> {element.location}
+                    </h5>
+
+                    {sentences.length > 1 ? (
+                      <ul className="qualification__description">
+                        {sentences.map((s, i) => (
+                          <li key={i}>{s}.</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="qualification__description">{element.description}</p>
+                    )}
                   </VerticalTimelineElement>
                 );
               })}
@@ -113,9 +129,16 @@ const Qualification = () => {
           >
             <VerticalTimeline lineColor=" var(--text-color)">
               {ExperienceData.map((element) => {
+                const sentences = element.description
+                  ? element.description
+                      .split('.')
+                      .map(s => s.trim())
+                      .filter(s => s.length > 0)
+                  : [];
+
                 return (
                   <VerticalTimelineElement
-                    key={element.key}
+                    key={element.id}
                     date={element.date}
                     dateClassName="qualification__data"
                     icon={workIcon.icon}
@@ -126,7 +149,16 @@ const Qualification = () => {
                       <i className="bx bxs-school"></i> {element.institution},
                       <i className="bx bx-map"></i> {element.location}
                     </h5>
-                    <p id="description">{element.description}</p>
+
+                    {sentences.length > 1 ? (
+                      <ul className="qualification__description">
+                        {sentences.map((s, i) => (
+                          <li key={i}>{s}.</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="qualification__description">{element.description}</p>
+                    )}
                   </VerticalTimelineElement>
                 );
               })}
