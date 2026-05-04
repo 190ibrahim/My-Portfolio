@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { mediaPath } from "./mediaPath";
 
 const WorkModal = ({ item, onClose }) => {
   useEffect(() => {
@@ -13,6 +14,9 @@ const WorkModal = ({ item, onClose }) => {
   }, [item, onClose]);
 
   if (!item) return null;
+
+  const mediaSrc = mediaPath(item.media?.src);
+  const posterSrc = mediaPath(item.media?.poster);
 
   return (
     <div
@@ -38,8 +42,8 @@ const WorkModal = ({ item, onClose }) => {
         <div className="work__modal-media">
           {item.media?.type === "video" ? (
             <video
-              src={item.media.src}
-              poster={item.media.poster}
+              src={mediaSrc}
+              poster={posterSrc}
               autoPlay
               muted
               loop
@@ -47,7 +51,7 @@ const WorkModal = ({ item, onClose }) => {
               controls
             />
           ) : item.media?.type === "image" ? (
-            <img src={item.media.src} alt={item.project} />
+            <img src={mediaSrc} alt={item.project} />
           ) : (
             <div className="work__media work__media--placeholder">
               <i className="uil uil-play-circle"></i>

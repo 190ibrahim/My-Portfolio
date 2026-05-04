@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { mediaPath } from "./mediaPath";
 
 // Cards have aspect-ratio 16/9 (≈1.78). If a source is meaningfully
 // narrower than that (square / portrait), `cover` would crop content,
@@ -51,9 +52,11 @@ const MediaPreview = ({ media, alt, className = "" }) => {
   }
 
   if (media.type === "image") {
+    const src = mediaPath(media.src);
+
     return (
       <img
-        src={media.src}
+        src={src}
         alt={alt}
         className={`work__media ${className}`}
         style={{ objectFit: fit }}
@@ -63,14 +66,17 @@ const MediaPreview = ({ media, alt, className = "" }) => {
     );
   }
 
+  const src = mediaPath(media.src);
+  const poster = mediaPath(media.poster);
+
   return (
     <video
       ref={ref}
       className={`work__media ${className}`}
       style={{ objectFit: fit }}
-      src={inView ? media.src : undefined}
-      data-src={media.src}
-      poster={media.poster}
+      src={inView ? src : undefined}
+      data-src={src}
+      poster={poster}
       muted
       loop
       playsInline
