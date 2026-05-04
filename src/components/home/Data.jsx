@@ -8,7 +8,7 @@ const Data = () => {
       <h3 className="home__subtitle">MSc Field Robotics Student</h3>
 
       <p className="home__description">
-      Erasmus Mundus Scholarship awardee, specializing in robotics, artificial intelligence, and autonomous systems, skilled in ROS, Python and machine learning, seeking a research or engineering role in the field of robotics.
+        Erasmus Mundus Scholarship awardee, specializing in robotics, artificial intelligence, and autonomous systems, skilled in ROS, Python and machine learning, seeking a research or engineering role in the field of robotics.
       </p>
     </div>
   );

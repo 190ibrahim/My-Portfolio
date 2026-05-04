@@ -23,6 +23,31 @@ export const projectsNav = [
 export const projectsData = [
   // ==================== ROBOTICS ====================
   {
+    id: 20,
+    slug: "warehouse-surveillance",
+    project: "Warehouse Surveillance Robot",
+    title: "Warehouse<br />Surveillance Robot",
+    category: CATEGORIES.ROBOTICS,
+    year: "2025",
+    role: "Team of 3",
+    stack: ["ROS", "YOLOv8", "ByteTrack", "Python", "Gazebo"],
+    description:
+      "Autonomous warehouse security robot using YOLOv8 person detection, ByteTrack multi-object tracking, and ArUco marker authorization to identify and pursue intruders in real time.",
+    features: [
+      "YOLOv8n detects people at 30 FPS; ByteTrack maintains persistent track IDs across occlusions",
+      "ArUco chest-ROI scan authorizes workers (ID=7 = green) and flags intruders (red)",
+      "Reactive controller pursues the largest intruder with proportional angular control and safe approach speed",
+      "Tested on real webcam and in a Gazebo/Pedsim warehouse with 9 autonomous agents",
+      "Full ROS Noetic pipeline: camera → detection → tracking → authorization → /cmd_vel",
+    ],
+    media: {
+      type: "video",
+      src: "/media/projects/warehouse-surveillance.mp4",
+    },
+    repository: "https://github.com/190ibrahim/warehouse-surveillance",
+    featured: true,
+  },
+  {
     id: 1,
     slug: "stereo-visual-odometry-kitti",
     project: "Stereo Visual Odometry (KITTI)",

@@ -97,6 +97,12 @@ const Qualification = () => {
                       {element.location}
                     </span>
                   </div>
+                  {element.scholarship && (
+                    <span className="qualification__scholarship">
+                      <i className="uil uil-award"></i>
+                      {element.scholarship}
+                    </span>
+                  )}
                   <p className="qualification__description">{element.description}</p>
                   </VerticalTimelineElement>
                 );

@@ -1,5 +1,5 @@
 .qualification__container {
-    max-width: 1040px;
+    max-width: 1100px;
 }
 
 
@@ -111,6 +111,24 @@
 
 #description {
     margin: 1.5em 0 2em 0;
+}
+
+.qualification__scholarship {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: linear-gradient(135deg, #f5c842, #e09b00);
+    color: #1a1100;
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-semi-bold);
+    padding: 0.3rem 0.8rem;
+    border-radius: 2rem;
+    margin: 0.6rem 0 0;
+    box-shadow: 0 2px 8px rgba(224, 155, 0, 0.3);
+}
+
+.qualification__scholarship i {
+    font-size: 0.95rem;
 }
 
 .qualification__description {
