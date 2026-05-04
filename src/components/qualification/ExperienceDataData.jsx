@@ -32,22 +32,6 @@ Applied piecewise regression, Kruskal algorithm and Discrete optimization for ea
       their studies and administrative tasks.`,
     date: "August 2022 - August 2023",
   },
-  {
-    id: 4,
-    title: "Youth worker",
-    institution: "British American Tobacco",
-    location: "Pécs, Hungary",
-    date: "June 2021 - Augest 2022",
-  },
-  {
-    id: 5,
-    title: "Tutor",
-    institution: "Al-Wahdah School",
-    location: "Taiz - Yemen",
-    description: `Due to my exceptional high school performance and the lack of teachers in my country, I was
-      selected to carry out some volunteering to tutor high school students in the following subjects: Mathematics, Physics`,
-    date: "Sepetember 2020 - December 2020",
-  },
 ];
 
 export default ExperienceData;
