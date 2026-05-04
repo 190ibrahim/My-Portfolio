@@ -10,6 +10,36 @@ const MediaPreview = ({ media, alt, className = "" }) => {
   const ref = useRef(null);
   const [fit, setFit] = useState("cover");
 
+  useEffect(() => {
+    if (!ref.current || media?.type !== "video") return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const el = ref.current;
+        if (!el) return;
+
+        if (entry.isIntersecting) {
+          el.currentTime = 0;
+          el.play().catch(() => {});
+        } else {
+          el.pause();
+          el.currentTime = 0;
+        }
+      },
+      { threshold: 0.35 }
+    );
+
+    observer.observe(ref.current);
+
+    return () => {
+      observer.disconnect();
+      if (ref.current) {
+        ref.current.pause();
+        ref.current.currentTime = 0;
+      }
+    };
+  }, [media]);
+
   const handleVideoMeta = (e) => {
     const { videoWidth, videoHeight } = e.target;
     if (!videoWidth || !videoHeight) return;
@@ -54,7 +84,6 @@ const MediaPreview = ({ media, alt, className = "" }) => {
       className={`work__media ${className}`}
       style={{ objectFit: fit }}
       src={src}
-      autoPlay
       muted
       loop
       playsInline
