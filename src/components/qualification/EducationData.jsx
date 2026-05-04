@@ -8,7 +8,7 @@ let EducationData = [
     description: `
       The first two semesters in Girona provide a solid foundation in field robotics, focusing on land and marine robots.
       In the third semester, specializing in multiple robots and aerial vehicles at the University of Zagreb.
-      The final semester is dedicated to a master's thesis.`,
+      The final semester is a master's thesis conducted in Berlin, Germany, carried out in conjunction with a robotics internship at W.I.S. Sicherheit.`,
     date: "September 2024 - Present",
   },
   {

@@ -99,7 +99,7 @@
   position: absolute;
   top: 0.75rem;
   left: 0.75rem;
-  background-color: rgba(0, 0, 0, 0.78);
+  background-color: rgba(0, 0, 0, 0.45);
   color: #fff;
   font-size: 0.7rem;
   font-weight: var(--font-semi-bold, 600);
