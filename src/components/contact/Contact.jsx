@@ -6,20 +6,27 @@ import "./contact.css";
 
 const Contact = () => {
   const form = useRef();
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    if (!publicKey) {
+      toast.error("EmailJS public key is missing.");
+      return;
+    }
 
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        import.meta.env.VITE_EMAILJS_USER_ID
+        publicKey
       )
       .then(
         (result) => {
           console.log(result.text);
+          e.target.reset();
           toast.success("Email sent successfully!", {
             position: "top-right",
             autoClose: 5000,
@@ -37,7 +44,6 @@ const Contact = () => {
           toast.error("Failed to send email.");
         }
       );
-    e.target.reset();
   };
 
   return (
