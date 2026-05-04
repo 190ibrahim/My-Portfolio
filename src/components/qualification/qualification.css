@@ -81,6 +81,7 @@
     flex-shrink: 0;
 }
 
+
 .qualification__description {
     margin: 0.85rem 0 0.25rem;
     line-height: 1.55;
@@ -111,6 +112,16 @@
 
 #description {
     margin: 1.5em 0 2em 0;
+}
+
+.qualification__link {
+    color: var(--title-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.qualification__link:hover {
+    color: var(--title-color-dark);
 }
 
 .qualification__scholarship {

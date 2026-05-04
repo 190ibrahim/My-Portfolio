@@ -90,7 +90,9 @@ const Qualification = () => {
                   <div className="qualification__meta">
                     <span className="qualification__meta-item">
                       <i className="uil uil-university"></i>
-                      {element.institution}
+                      {element.link ? (
+                        <a href={element.link} target="_blank" rel="noreferrer" className="qualification__link">{element.institution}</a>
+                      ) : element.institution}
                     </span>
                     <span className="qualification__meta-item">
                       <i className="uil uil-map-marker"></i>
@@ -136,7 +138,9 @@ const Qualification = () => {
                     <div className="qualification__meta">
                       <span className="qualification__meta-item">
                         <i className="uil uil-briefcase-alt"></i>
-                        {element.institution}
+                        {element.link ? (
+                          <a href={element.link} target="_blank" rel="noreferrer" className="qualification__link">{element.institution}</a>
+                        ) : element.institution}
                       </span>
                       <span className="qualification__meta-item">
                         <i className="uil uil-map-marker"></i>
