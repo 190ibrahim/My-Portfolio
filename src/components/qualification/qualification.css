@@ -182,6 +182,12 @@
     .qualification__button {
         margin: 0 var(--mb-0-75);
     }
+
+    .qualification__scholarship {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 /* For small devices */
