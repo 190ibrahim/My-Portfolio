@@ -228,7 +228,7 @@ export const projectsData = [
     ],
     media: {
       type: "image",
-      src: "/media/projects/uxo.png",
+      src: "/media/projects/uxo.jpg",
     },
     repository: "https://github.com/190ibrahim/Sparsely_Annotated_UXO_Segmentation",
     featured: true,
@@ -274,7 +274,7 @@ export const projectsData = [
     ],
     media: {
       type: "image",
-      src: "/media/projects/explainable-ai.png",
+      src: "/media/projects/explainable-ai.jpg",
     },
     repository: "https://github.com/190ibrahim/Explainable_AI",
   },
