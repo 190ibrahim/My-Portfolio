@@ -154,7 +154,6 @@ export const projectsData = [
     "Added landmark initialization when new Cartesian features are observed",
     "Used data association to match sensor observations with mapped landmarks",
     "Visualized robot trajectory, landmark estimates, uncertainty ellipses, and error statistics",
-    "Recorded a portfolio-ready simulation video from a 5000-step run",
   ],
   media: {
     type: "video",
