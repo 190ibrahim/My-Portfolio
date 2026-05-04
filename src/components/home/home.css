@@ -271,10 +271,13 @@
   .home__buttons {
     flex-direction: column;
     gap: 0.75rem;
+    justify-content: center;
   }
 
   .home__buttons .button {
     width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 }
 
