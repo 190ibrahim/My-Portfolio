@@ -1,23 +1,20 @@
 
 const Info = () => {
   return (
-    <div className="about__info grid">
-      <div className="about__box">
-        <i className="bx bxs-graduation about__icon"></i>
-        <h3 className="about__title">Currently in </h3>
-        <span className="about__subtitle">The final year</span>
+    <div className="home__info-list">
+      <div className="home__info-item">
+        <i className="bx bxs-briefcase home__info-icon"></i>
+        <p className="home__info-text">Software Robotics Intern @ W.I.S. Sicherheit</p>
       </div>
 
-      <div className="about__box">
-        <i className="bx bxs-badge-check about__icon"></i>
-        <h3 className="about__title">Completed</h3>
-        <span className="about__subtitle">30 + Projects</span>
+      <div className="home__info-item">
+        <i className="bx bxs-map home__info-icon"></i>
+        <p className="home__info-text">Berlin, Germany</p>
       </div>
 
-      <div className="about__box">
-        <i className="bx bxs-location-plus about__icon"></i>
-        <h3 className="about__title">Mobility </h3>
-        <span className="about__subtitle">Open to relocation</span>
+      <div className="home__info-item">
+        <i className="bx bxs-paper-plane home__info-icon"></i>
+        <p className="home__info-text">Open to relocation</p>
       </div>
     </div>
   );

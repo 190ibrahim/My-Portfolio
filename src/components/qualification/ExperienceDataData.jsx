@@ -1,6 +1,14 @@
 let ExperienceData = [
   {
     id: 1,
+    title: "Software Robotics Intern",
+    institution: "W.I.S. Sicherheit",
+    location: "Berlin, Germany",
+    description: `Robotics intern working on a quadruped robot, Unitree Go2 EDU, developing a full-stack teleoperation and autonomous navigation system. I implement mapping, localization, and motion planning using ROS2, and I also build a web-based platform integrating frontend (React, WebSockets, TURN) and backend (Laravel PHP), with a low-latency communication architecture based on WebRTC and NATS for real-time monitoring and controlling the robot.`,
+    date: "Feb 2026 - Present",
+  },
+  {
+    id: 2,
     title: "Machine Learning Research Intern",
     institution: "CoE Marble",
     location: "Zagreb, Croatia",
@@ -14,7 +22,7 @@ Conducted benchmarking and literature review on state-of-the-art visual anomaly 
     date: "July 2025 - October 2025",
   },
   {
-    id: 2,
+    id: 3,
     title: "Automation & Data Engineer",
     institution: "DATelite Informatics Ltd",
     location: "Pécs, Hungary",
@@ -24,7 +32,7 @@ Applied piecewise regression, Kruskal algorithm and Discrete optimization for ea
     date: "October 2023 - April 2024",
   },
   {
-    id: 3,
+    id: 4,
     title: "Stipendium Hungaricum Mentor",
     institution: "University Of Pécs",
     location: "Pécs, Hungary",

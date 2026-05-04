@@ -2,11 +2,19 @@
   row-gap: 6rem;
 }
 
+/* Make the Home section slightly wider than the global container */
+.home .container {
+  max-width: 1120px;
+}
+
 .home__content {
   grid-template-columns: 116px repeat(2, 1fr);
-  padding-top: 5.5rem;
+  padding-top: 3.5rem;
   column-gap: 2rem;
   align-items: center;
+}
+
+.home__data {
 }
 
 .home__social {
@@ -30,9 +38,10 @@
 }
 
 .home__hand {
-  width: 38px;
-  height: 38px;
-  margin-left: 0.4rem;
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-size: 0.9em;
+  line-height: 1;
 }
 
 .home__subtitle {
@@ -53,9 +62,66 @@
   top: 1rem;
 }
 
+.home__info-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mb-2);
+  padding: 0;
+}
+
+.home__info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: var(--mb-2);
+  max-width: 460px;
+}
+
+.home__info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.home__info-icon {
+  font-size: 1.15rem;
+  color: var(--title-color);
+  flex-shrink: 0;
+}
+
+.home__info-text {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-normal);
+  color: var(--text-color);
+  line-height: 1.4;
+}
+
 .home__description {
-  max-width: 400px;
+  /* allow description to take more horizontal space */
+  max-width: 720px;
+  line-height: 1.6;
   margin-bottom: var(--mb-3);
+}
+
+.home__buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between; /* push buttons to left and right */
+  width: 100%;
+}
+
+
+.home__info-block {
+  width: 100%;
+}
+
+.home__info-block .home__info-list {
+  justify-items: start;
+}
+
+.home__buttons {
+  align-self: flex-start;
 }
 
 .home__img {
@@ -152,6 +218,15 @@
   .home__scroll {
     margin-left: 7.5rem;
   }
+
+  .home__info-section {
+    margin-left: 100px;
+  }
+
+  .home__buttons {
+    gap: 0.75rem;
+  }
+
 }
 
 /* For medium devices */
@@ -170,10 +245,20 @@
     grid-column: 1/3;
   }
 
+  .home__info-section {
+    margin-left: 0;
+    padding: 0 var(--mb-1);
+  }
+
   .home__img {
     box-shadow: inset 0 0 0 6px rgb(255 255 255 / 30%);
     width: 200px;
     height: 200px;
+  }
+
+  .home__buttons {
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
   .home__scroll {
@@ -182,6 +267,18 @@
 }
 
 /* For small devices */
+@media screen and (max-width: 576px) {
+  .home__buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .home__buttons .button {
+    width: 100%;
+  }
+}
+
+/* For extra small devices */
 @media screen and (max-width: 350px) {
   .home__img {
     width: 180px;
@@ -192,4 +289,5 @@
     width: 22px;
     height: 22px;
   }
+
 }
