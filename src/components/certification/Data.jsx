@@ -186,6 +186,54 @@ export const projectsData = [
   },
  
   {
+    id: 18,
+    slug: "astar-path-planning",
+    project: "A* Path Planning",
+    title: "A* Path<br />Planning",
+    category: CATEGORIES.ROBOTICS,
+    year: "2024",
+    role: "Team of 2",
+    stack: ["Python", "A*", "NumPy", "Matplotlib", "PIL"],
+    description:
+      "Discrete A* algorithm for optimal path planning on 2D grid maps, supporting both 4-connectivity and 8-connectivity with Euclidean heuristic.",
+    features: [
+      "A* with connect-4 and connect-8 neighbour expansion on binarized grid maps",
+      "Euclidean distance heuristic with priority-queue open set for O(log n) node expansion",
+      "Visibility graph construction and shortest-path search on polygon environments",
+      "Tested across eight maps of increasing complexity, from open fields to dense mazes",
+      "Outputs optimal path coordinates and total Euclidean path cost",
+    ],
+    media: {
+      type: "video",
+      src: "/media/projects/astar-path-planning.mp4",
+    },
+    repository: "https://github.com/190ibrahim",
+  },
+  {
+    id: 17,
+    slug: "rrt-path-planning",
+    project: "RRT & RRT* Path Planning",
+    title: "RRT &amp; RRT*<br />Path Planning",
+    category: CATEGORIES.ROBOTICS,
+    year: "2024",
+    role: "Team of 2",
+    stack: ["Python", "RRT", "RRT*", "NumPy", "Matplotlib"],
+    description:
+      "Sampling-based motion planning using RRT and RRT* algorithms to solve 2D path planning problems across grid map environments of varying complexity.",
+    features: [
+      "Implemented RRT and RRT* from scratch in Python for 2D grid maps",
+      "Binarized grayscale map images to define free vs. occupied space",
+      "Path smoothing to reduce waypoints while maintaining collision-free trajectories",
+      "Tested on four maps ranging from open spaces to complex mazes",
+      "RRT* converges to an asymptotically optimal path via rewiring",
+    ],
+    media: {
+      type: "video",
+      src: "/media/projects/rrt-path-planning.mp4",
+    },
+    repository: "https://github.com/190ibrahim",
+  },
+  {
     id: 7,
     slug: "feature-extraction-image-registration",
     project: "Feature Extraction & Image Registration",
