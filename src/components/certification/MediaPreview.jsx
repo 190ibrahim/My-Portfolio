@@ -8,27 +8,7 @@ const WIDESCREEN_THRESHOLD = 1.6;
 
 const MediaPreview = ({ media, alt, className = "" }) => {
   const ref = useRef(null);
-  const [inView, setInView] = useState(false);
   const [fit, setFit] = useState("cover");
-
-  useEffect(() => {
-    if (!ref.current || media?.type !== "video") return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        const el = ref.current;
-        if (!el) return;
-        if (entry.isIntersecting) {
-          setInView(true);
-          el.play().catch(() => {});
-        } else {
-          el.pause();
-        }
-      },
-      { threshold: 0.25 }
-    );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [media]);
 
   const handleVideoMeta = (e) => {
     const { videoWidth, videoHeight } = e.target;
@@ -67,20 +47,18 @@ const MediaPreview = ({ media, alt, className = "" }) => {
   }
 
   const src = mediaPath(media.src);
-  const poster = mediaPath(media.poster);
 
   return (
     <video
       ref={ref}
       className={`work__media ${className}`}
       style={{ objectFit: fit }}
-      src={inView ? src : undefined}
-      data-src={src}
-      poster={poster}
+      src={src}
+      autoPlay
       muted
       loop
       playsInline
-      preload="metadata"
+      preload="auto"
       onLoadedMetadata={handleVideoMeta}
       aria-label={alt}
     />
