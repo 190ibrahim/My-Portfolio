@@ -1,5 +1,5 @@
 import "./about.css";
-import AboutImg from "../../assets/profile.jpg";
+import AboutImg from "../../assets/about_me.jpeg";
 import CV from "../../assets/Ibrahim-CV.pdf";
 import Info from "./Info";
 
@@ -16,9 +16,7 @@ const About = () => {
           <Info />
 
           <p className="about__description">
-            Hi there! I'm Ibrahim, a Passionate robotics student with a strong background in computer science and a master's in Intelligent Field Robotic Systems.
-Skilled in motion planning, computer vision, and autonomous systems, with hands-on experience in ROS, ML, and robotic
-simulation. Seeking research or engineering roles in autonomous systems and AI-driven robotics. Let's connect!
+            Erasmus Mundus Scholarship awardee, specializing in robotics, artificial intelligence, and autonomous systems, skilled in ROS, Python and machine learning, seeking a research or engineering role in the field of robotics.
           </p>
 
           <a download="" href={CV} className="button button--flex">
