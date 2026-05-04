@@ -4,14 +4,10 @@ import Home from './components/home/Home';
 import About from './components/about/About';
 import Skills from './components/skills/Skills';
 import Qualification from './components/qualification/Qualification';
-import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import ScrollUp from './components/scrollup/ScrollUp';
-// import Testimonials from './components/testimonials/Testimonials';
 import Work from './components/certification/Work';
-
-<components />
 function App() {
 
   return (
@@ -21,10 +17,8 @@ function App() {
         <Home />
         <About />
         <Qualification />
-        <Portfolio />
-        {/* <Testimonials /> */}
-        {/* <Work /> */}
         <Skills />
+        <Work />
         <Contact />
       </main>
       <Footer />

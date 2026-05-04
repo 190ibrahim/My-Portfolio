@@ -2,7 +2,7 @@
 const Backend = () => {
   return (
     <div className="skills__content">
-      <h3 className="skills__title">Web Development (Previous Experience)</h3>
+      <h3 className="skills__title">Web & Backend Development (Previous Experience)</h3>
 
       <div className="skills__box">
         <div className="skills__group">

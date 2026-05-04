@@ -1,60 +1,46 @@
-import{ useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 
-// import data
-import { projectsData } from "./Data";
-import { projectsNav } from "./Data";
-
-// import components
+import { projectsData, projectsNav, CATEGORIES } from "./Data";
 import WorkItems from "./WorkItems";
+import WorkModal from "./WorkModal";
 
-const Projects = () => {
-  const [item, setItem] = useState({ name: "all" });
-  const [projects, setProjects] = useState([]);
-  const [active, setActive] = useState(0);
+const Works = () => {
+  const [active, setActive] = useState(CATEGORIES.ALL);
+  const [selected, setSelected] = useState(null);
 
-  useEffect(() => {
-    // get projects based on item
-    if (item.name === "all") {
-      setProjects(projectsData);
-    } else {
-      const newProjects = projectsData.filter((project) => {
-        return project.category.toLowerCase() === item.name;
-      });
-      setProjects(newProjects);
-    }
-  }, [item]);
-
-  const handleClick = (e, index) => {
-    setItem({ name: e.target.textContent.toLowerCase() });
-    setActive(index);
-  };
+  const filtered = useMemo(() => {
+    if (active === CATEGORIES.ALL) return projectsData;
+    return projectsData.filter((p) => p.category === active);
+  }, [active]);
 
   return (
-    <div>
-      {/* projects nav */}
-      <div className="work__filters">
-        {projectsNav.map((item, index) => {
+    <>
+      <div className="work__filters" role="tablist" aria-label="Project categories">
+        {projectsNav.map((tab) => {
+          const isActive = active === tab.value;
           return (
-            <span
-              onClick={(e) => {
-                handleClick(e, index);
-              }}
-              className={`${active === index ? "active-work" : ""} work__item`}
-              key={index}
+            <button
+              key={tab.value}
+              role="tab"
+              aria-selected={isActive}
+              onClick={() => setActive(tab.value)}
+              className={`work__filter ${isActive ? "work__filter--active" : ""}`}
             >
-              {item.name}
-            </span>
+              {tab.name}
+            </button>
           );
         })}
       </div>
-      {/* projects */}
-      <div className="work__container container grid">
-        {projects.map((item) => {
-          return <WorkItems item={item} key={item.id} />;
-        })}
+
+      <div className="work__container container">
+        {filtered.map((item) => (
+          <WorkItems key={item.id} item={item} onOpen={setSelected} />
+        ))}
       </div>
-    </div>
+
+      <WorkModal item={selected} onClose={() => setSelected(null)} />
+    </>
   );
 };
 
-export default Projects;
+export default Works;

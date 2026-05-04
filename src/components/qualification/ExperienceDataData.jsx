@@ -1,5 +1,5 @@
 let ExperienceData = [
-    {
+  {
     id: 1,
     title: "Machine Learning Research Intern",
     institution: "CoE Marble",
