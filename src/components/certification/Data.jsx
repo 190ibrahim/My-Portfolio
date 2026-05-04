@@ -210,6 +210,30 @@ export const projectsData = [
     repository: "https://github.com/190ibrahim",
   },
   {
+    id: 19,
+    slug: "aruco-opencv",
+    project: "ArUco Markers & Augmented Reality",
+    title: "ArUco Markers<br />&amp; Augmented Reality",
+    category: CATEGORIES.ROBOTICS,
+    year: "2025",
+    role: "Team of 2",
+    stack: ["C++", "OpenCV", "ArUco", "CMake"],
+    description:
+      "A five-lab series progressing from ArUco marker generation and detection to full camera calibration and real-time augmented reality with pose estimation.",
+    features: [
+      "Generated single ArUco markers and grid boards from OpenCV dictionaries",
+      "Real-time marker detection with green border overlay and ID display",
+      "Camera calibration using an ArUco board — estimated intrinsics and distortion coefficients",
+      "6-DoF pose estimation per marker using calibrated camera parameters",
+      "Augmented reality: virtual 3D cube rendered on top of live marker feed",
+    ],
+    media: {
+      type: "video",
+      src: "/media/projects/aruco-opencv.mp4",
+    },
+    repository: "https://github.com/190ibrahim",
+  },
+  {
     id: 17,
     slug: "rrt-path-planning",
     project: "RRT & RRT* Path Planning",
