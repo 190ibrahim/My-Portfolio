@@ -66,7 +66,13 @@ const Qualification = () => {
                         {element.scholarship}
                       </span>
                     )}
+                  {Array.isArray(element.description) ? (
+                    <ul className="qualification__description">
+                      {element.description.map((point, i) => <li key={i}>{point}</li>)}
+                    </ul>
+                  ) : (
                     <p className="qualification__description">{element.description}</p>
+                  )}
                   </VerticalTimelineElement>
                 ))}
                 <VerticalTimelineElement
@@ -110,7 +116,13 @@ const Qualification = () => {
                         {element.location}
                       </span>
                     </div>
+                  {Array.isArray(element.description) ? (
+                    <ul className="qualification__description">
+                      {element.description.map((point, i) => <li key={i}>{point}</li>)}
+                    </ul>
+                  ) : (
                     <p className="qualification__description">{element.description}</p>
+                  )}
                   </VerticalTimelineElement>
                 ))}
                 <VerticalTimelineElement

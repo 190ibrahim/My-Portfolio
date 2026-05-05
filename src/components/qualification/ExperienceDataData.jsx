@@ -5,7 +5,13 @@ let ExperienceData = [
     institution: "W.I.S. Sicherheit",
     location: "Berlin, Germany",
     link: "https://www.wis-sicherheit.de/",
-    description: `Robotics intern working on a quadruped robot, Unitree Go2 EDU, developing a full-stack teleoperation and autonomous navigation system. I implement mapping, localization, and motion planning using ROS2, and I also build a web-based platform integrating frontend (React, WebSockets, TURN) and backend (Laravel PHP), with a low-latency communication architecture based on WebRTC and NATS for real-time monitoring and controlling the robot.`,
+    description: [
+      "Developing a full-stack teleoperation and autonomous navigation system for the Unitree Go2 EDU quadruped robot",
+      "Implementing SLAM-based mapping, localization, and motion planning pipelines using ROS2",
+      "Building a real-time web platform with React (frontend) and Laravel PHP (backend) for live robot monitoring and control",
+      "Designing a low-latency communication architecture using WebRTC, WebSockets, and NATS for reliable robot teleoperation",
+      "Integrating a TURN server to enable robust peer-to-peer video and control channels across networks",
+    ],
     date: "Feb 2026 - Present",
   },
   {
@@ -14,13 +20,12 @@ let ExperienceData = [
     institution: "CoE Marble",
     location: "Zagreb, Croatia",
     link: "https://marble.eu/headquarters-2/",
-    description: `Developed and evaluated visual anomaly detection models (Autoencoder U-Net, YOLO, EfficientAD, PatchCore) on offshore and wind-turbine inspection datasets.
-
-Implemented synthetic anomaly generation pipelines and created a custom underwater inspection dataset.
-
-Integrated explainability techniques (Grad-CAM, feature attribution maps) to interpret and visualize model decisions.
-
-Conducted benchmarking and literature review on state-of-the-art visual anomaly detection and explainable AI methods. `,
+    description: [
+      "Developed and benchmarked visual anomaly detection models (EfficientAD, PatchCore, Autoencoder U-Net, YOLO) on offshore and wind-turbine inspection datasets",
+      "Implemented synthetic anomaly generation pipelines to expand and diversify training data to improve model robustness",
+      "Integrated Grad-CAM and feature attribution maps to enhance model interpretability and communicate decisions to stakeholders",
+      "Conducted benchmarking and literature review of state-of-the-art anomaly detection and explainable AI methods",
+    ],
     date: "July 2025 - October 2025",
   },
   {
@@ -29,9 +34,11 @@ Conducted benchmarking and literature review on state-of-the-art visual anomaly 
     institution: "DATelite Informatics Ltd",
     location: "Pécs, Hungary",
     link: "https://www.datelite.hu/",
-    description: `Designed and executed ETL processes, developing Python functions for discrete ETL steps.
-Implemented statistical modeling and visualization plotting to derive meaningful insights from data.
-Applied piecewise regression, Kruskal algorithm and Discrete optimization for earth observation`,
+    description: [
+      "Developed ETL pipelines using Python for large-scale earth observation data processing",
+      "Applied piecewise regression, the Kruskal algorithm, and discrete optimization techniques for geospatial data analysis",
+      "Built statistical models and data visualizations to extract insights from complex datasets",
+    ],
     date: "October 2023 - April 2024",
   },
   {
@@ -40,8 +47,9 @@ Applied piecewise regression, Kruskal algorithm and Discrete optimization for ea
     institution: "University Of Pécs",
     location: "Pécs, Hungary",
     link: "https://shmentor.hu/",
-    description: `Welcomed international students to the university and provided up-to-date information about
-      their studies and administrative tasks.`,
+    description: [
+      "Welcomed international students to the university and provided up-to-date information about their studies and administrative tasks.",
+    ],
     date: "August 2022 - August 2023",
   },
 ];
