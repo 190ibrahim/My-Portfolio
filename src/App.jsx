@@ -17,6 +17,8 @@ function App() {
         <Qualification />
         <Work />
         <Skills />
+                {/* <Contact /> */}
+
         <Contact />
       </main>
       <Footer />
