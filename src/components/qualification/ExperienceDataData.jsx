@@ -1,7 +1,7 @@
 let ExperienceData = [
   {
     id: 1,
-    title: "Software Robotics Intern",
+    title: "Robotics Engineer Intern",
     institution: "W.I.S. Sicherheit",
     location: "Berlin, Germany",
     link: "https://www.wis-sicherheit.de/",
@@ -25,7 +25,7 @@ Conducted benchmarking and literature review on state-of-the-art visual anomaly 
   },
   {
     id: 3,
-    title: "Automation & Data Engineer",
+    title: "Data Engineer Intern",
     institution: "DATelite Informatics Ltd",
     location: "Pécs, Hungary",
     link: "https://www.datelite.hu/",

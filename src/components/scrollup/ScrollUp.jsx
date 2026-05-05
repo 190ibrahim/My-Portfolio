@@ -1,17 +1,47 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import "./scrollup.css";
 
 const ScrollUp = () => {
-  window.addEventListener("scroll", function () {
-    const scrollUp = document.querySelector(".scrollup");
-    // when the scroll is higher than 560 viewport height, add the show-scroll class to a tag with the scroll-top class
-    if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
-    else scrollUp.classList.remove("show-scroll");
-  });
+  const [show, setShow] = useState(false);
+  const [goingUp, setGoingUp] = useState(true);
+
+  useEffect(() => {
+    let lastY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      const atBottom = window.innerHeight + currentY >= document.body.scrollHeight - 10;
+      const up = atBottom || currentY < lastY;
+      setShow(currentY >= 560);
+      setGoingUp(up);
+      document.documentElement.style.setProperty(
+        "--scrollbar-gradient",
+        up
+          ? `var(--title-color), transparent`
+          : `transparent, var(--title-color)`
+      );
+      lastY = currentY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleClick = () => {
+    if (goingUp) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }
+  };
+
   return (
-    <a href="#" className="scrollup">
-      <i className="uil uil-arrow-up scrollup__icon"></i>
-    </a>
+    <button
+      onClick={handleClick}
+      className={`scrollup${show ? " show-scroll" : ""}${goingUp ? " scrollup--up" : " scrollup--down"}`}
+    >
+      <i className={`uil ${goingUp ? "uil-arrow-up" : "uil-arrow-down"} scrollup__icon`}></i>
+    </button>
   );
 };
 

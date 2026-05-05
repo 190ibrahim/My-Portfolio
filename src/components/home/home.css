@@ -14,8 +14,6 @@
   align-items: center;
 }
 
-.home__data {
-}
 
 .home__social {
   display: grid;
@@ -233,7 +231,7 @@
 @media screen and (max-width: 768px) {
   .home__content {
     grid-template-columns: 0.5fr 3fr;
-    padding-top: 3.5rem;
+    padding-top: 1rem;
   }
 
   .home__img {
@@ -268,6 +266,10 @@
 
 /* For small devices */
 @media screen and (max-width: 576px) {
+  .home__title {
+    font-size: 2.4rem;
+  }
+
   .home__buttons {
     flex-direction: column;
     gap: 0.75rem;

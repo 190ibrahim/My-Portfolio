@@ -148,6 +148,7 @@ const Contact = () => {
               ></textarea>
             </div>
 
+            <div style={{ display: "flex", justifyContent: "center" }}>
             <button className="button button--flex">
               Send Message
               <svg
@@ -168,6 +169,7 @@ const Contact = () => {
                 ></path>
               </svg>
             </button>
+            </div>
           </form>
         </div>
       </div>
