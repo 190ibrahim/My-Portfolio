@@ -36,8 +36,6 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
   max-width: 980px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /*=============== CARD ===============*/
