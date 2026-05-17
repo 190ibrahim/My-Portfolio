@@ -1,13 +1,22 @@
 import { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 
-import { projectsData, projectsNav, CATEGORIES } from "./Data";
+import { projectsData, CATEGORIES } from "./Data";
 import WorkItems from "./WorkItems";
 import WorkModal from "./WorkModal";
 import { trackEvent } from "../../utils/track";
 
 const Works = () => {
+  const { t } = useTranslation();
   const [active, setActive] = useState(CATEGORIES.ALL);
   const [selected, setSelected] = useState(null);
+
+  const tabs = [
+    { name: t("work.filters.all"), value: CATEGORIES.ALL },
+    { name: t("work.filters.robotics"), value: CATEGORIES.ROBOTICS },
+    { name: t("work.filters.aiml"), value: CATEGORIES.AI_ML },
+    { name: t("work.filters.software"), value: CATEGORIES.SOFTWARE },
+  ];
 
   const filtered = useMemo(() => {
     if (active === CATEGORIES.ALL) return projectsData;
@@ -22,7 +31,7 @@ const Works = () => {
   return (
     <>
       <div className="work__filters" role="tablist" aria-label="Project categories">
-        {projectsNav.map((tab) => {
+        {tabs.map((tab) => {
           const isActive = active === tab.value;
           return (
             <button

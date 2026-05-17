@@ -14,6 +14,11 @@
   align-items: center;
 }
 
+/* Tighter padding so longer button text (e.g. German "Lebenslauf herunterladen") still fits side-by-side */
+.home__buttons .button {
+  padding: 1rem 1.25rem;
+}
+
 
 .home__social {
   display: grid;
@@ -33,6 +38,12 @@
 .home__title {
   font-size: 3.2rem;
   margin-bottom: var(--mb-0-25);
+}
+
+/* Keep the waving hand glued to the title — prevents Chrome from wrapping it
+   onto its own line (Firefox keeps them together by default). */
+.home__title-text {
+  white-space: nowrap;
 }
 
 .home__hand {
@@ -105,10 +116,9 @@
 
 .home__buttons {
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
   align-items: center;
-  justify-content: space-between; /* push buttons to left and right */
-  width: 100%;
+  flex-wrap: wrap;
 }
 
 
@@ -269,7 +279,11 @@
 /* For small devices */
 @media screen and (max-width: 576px) {
   .home__title {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+  }
+
+  .home__hand {
+    font-size: 0.75em;
   }
 
   .home__buttons {

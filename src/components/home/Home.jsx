@@ -1,4 +1,5 @@
 import "./home.css";
+import { useTranslation } from "react-i18next";
 import Social from "./Social";
 import Data from "./Data";
 import ScrollDown from "./ScrollDown";
@@ -7,6 +8,7 @@ import CV from "../../assets/Ibrahim-CV.pdf";
 import { trackEvent } from "../../utils/track";
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <section className="home section" id="home">
       <div className="home__container container grid">
@@ -23,7 +25,7 @@ const Home = () => {
 
               <div className="home__buttons">
                 <a href="#contact" className="button button--flex">
-                  Say Hello
+                  {t("home.buttons.sayHello")}
                   <svg
                     className="button__icon"
                     xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +46,7 @@ const Home = () => {
                 </a>
 
                 <a download="" href={CV} className="button button--flex" onClick={() => trackEvent("cv-download", "CV downloaded from hero")}>
-                  Download CV
+                  {t("home.buttons.downloadCV")}
                   <svg
                     className="button__icon"
                     xmlns="http://www.w3.org/2000/svg"

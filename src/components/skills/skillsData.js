@@ -1,9 +1,9 @@
 // Grouped by recency / strength of use, not by domain.
 // Most relevant to recruiters: top of list. Each chip lists a single skill.
+// Titles + notes live in i18n locales under skills.categories.{key}
 export const skillCategories = [
   {
-    title: "Currently Using",
-    note: "Active in current studies and projects",
+    key: "currentlyUsing",
     skills: [
       "Python",
       "C++",
@@ -22,8 +22,7 @@ export const skillCategories = [
     ],
   },
   {
-    title: "Comfortable",
-    note: "Solid working knowledge — can pick up immediately",
+    key: "comfortable",
     skills: [
       "JavaScript",
       "SQL",
@@ -31,8 +30,7 @@ export const skillCategories = [
     ],
   },
   {
-    title: "Familiar With",
-    note: "Used in past projects, refresher needed",
+    key: "familiar",
     skills: [
       "PHP",
       "Laravel",

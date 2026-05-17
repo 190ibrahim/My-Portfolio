@@ -127,3 +127,47 @@
         column-gap: 0;
     }
 }
+/*=============== LANGUAGE TOGGLE ===============*/
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 999px;
+    padding: 0.2rem;
+    cursor: pointer;
+    margin-left: var(--mb-1);
+}
+
+.lang-toggle__opt {
+    font-size: 0.75rem;
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.lang-toggle__opt--active {
+    background-color: var(--title-color);
+    color: var(--container-color);
+}
+
+.lang-toggle:hover .lang-toggle__opt:not(.lang-toggle__opt--active) {
+    color: var(--title-color);
+}
+
+/* Center the language toggle in the mobile nav bar */
+@media screen and (max-width: 768px) {
+    .nav {
+        position: relative;
+    }
+    .lang-toggle {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
+}

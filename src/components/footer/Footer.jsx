@@ -1,7 +1,9 @@
 import "./footer.css";
+import { useTranslation } from "react-i18next";
 import { trackEvent } from "../../utils/track";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="footer">
       <div className="footer__container container">
@@ -12,7 +14,7 @@ const Footer = () => {
         <ul className="footer__list">
           <li>
             <a href="#experience" className="footer__link">
-              Experience
+              {t("footer.experience")}
             </a>
           </li>
 
@@ -62,7 +64,7 @@ const Footer = () => {
         </div>
 
         <span className="footer__copy">
-          &#169;  All rigths reserved
+          {t("footer.copyright")}
         </span>
       </div>
     </footer>

@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -6,6 +7,7 @@ import "./contact.css";
 import { trackEvent } from "../../utils/track";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const form = useRef();
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
@@ -13,7 +15,7 @@ const Contact = () => {
     e.preventDefault();
 
     if (!publicKey) {
-      toast.error("EmailJS public key is missing.");
+      toast.error(t("contact.toasts.missingKey"));
       return;
     }
 
@@ -29,7 +31,7 @@ const Contact = () => {
           console.log(result.text);
           e.target.reset();
           trackEvent("contact-form-sent", "Contact form submitted successfully");
-          toast.success("Email sent successfully!", {
+          toast.success(t("contact.toasts.success"), {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -43,25 +45,25 @@ const Contact = () => {
         },
         (error) => {
           console.log(error.text);
-          toast.error("Failed to send email.");
+          toast.error(t("contact.toasts.fail"));
         }
       );
   };
 
   return (
     <section className="contact section" id="contact">
-      <h2 className="section__title">Get in touch</h2>
-      <span className="section__subtitle">Contact Me</span>
+      <h2 className="section__title">{t("contact.title")}</h2>
+      <span className="section__subtitle">{t("contact.subtitle")}</span>
 
       <div className="contact__container container grid">
         <div className="contact__content">
-          <h3 className="contact__title">Talk to me</h3>
+          <h3 className="contact__title">{t("contact.talkToMe")}</h3>
 
           <div className="contact__info">
             <div className="contact__card">
               <i className="bx bx-mail-send contact__card-icon"></i>
 
-              <h3 className="contact__card-title">Email</h3>
+              <h3 className="contact__card-title">{t("contact.cards.email")}</h3>
               <span className="contact__card-data">
                 190ibrahimahmed@gmail.com
               </span>
@@ -73,14 +75,14 @@ const Contact = () => {
                 rel="noreferrer"
                 onClick={() => trackEvent("outbound-email", "Email clicked from contact card")}
               >
-                Write me{" "}
+                {t("contact.cards.writeMe")}{" "}
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
             </div>
 
             <div className="contact__card">
               <i className="bx bxl-linkedin contact__card-icon"></i>
-              <h3 className="contact__card-title">LinkedIn</h3>
+              <h3 className="contact__card-title">{t("contact.cards.linkedin")}</h3>
               <span className="contact__card-data">Ibrahim Ibrahim</span>
 
               <a
@@ -90,7 +92,7 @@ const Contact = () => {
                 rel="noreferrer"
                 onClick={() => trackEvent("outbound-linkedin", "LinkedIn clicked from contact card")}
               >
-                Connect With Me{" "}
+                {t("contact.cards.connectWithMe")}{" "}
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
             </div>
@@ -98,7 +100,7 @@ const Contact = () => {
             <div className="contact__card">
               <i className="bx bxl-github contact__card-icon"></i>
 
-              <h3 className="contact__card-title">GitHub</h3>
+              <h3 className="contact__card-title">{t("contact.cards.github")}</h3>
               <span className="contact__card-data">190ibrahim</span>
 
               <a
@@ -108,7 +110,7 @@ const Contact = () => {
                 rel="noreferrer"
                 onClick={() => trackEvent("outbound-github", "GitHub clicked from contact card")}
               >
-                See My Work{" "}
+                {t("contact.cards.seeMyWork")}{" "}
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
             </div>
@@ -116,46 +118,46 @@ const Contact = () => {
         </div>
 
         <div className="contact__content">
-          <h3 className="contact__title">Have something to say?</h3>
+          <h3 className="contact__title">{t("contact.haveSomethingToSay")}</h3>
 
           <form ref={form} onSubmit={sendEmail} className="contact__form">
             <div className="contact__form-div">
-              <label className="contact__form-tag">Name</label>
+              <label className="contact__form-tag">{t("contact.form.name")}</label>
               <input
                 type="text"
                 name="name"
                 className="contact__form-input"
-                placeholder="Insert your name"
+                placeholder={t("contact.form.namePlaceholder")}
                 required
               />
             </div>
 
             <div className="contact__form-div">
-              <label className="contact__form-tag">Mail</label>
+              <label className="contact__form-tag">{t("contact.form.mail")}</label>
               <input
                 type="email"
                 name="email"
                 className="contact__form-input"
-                placeholder="Insert your email"
+                placeholder={t("contact.form.mailPlaceholder")}
                 required
               />
             </div>
 
             <div className="contact__form-div contact__form-area">
-              <label className="contact__form-tag">Message</label>
+              <label className="contact__form-tag">{t("contact.form.message")}</label>
               <textarea
                 name="content"
                 cols="30"
                 rows="10"
                 className="contact__form-input"
-                placeholder="Write your message"
+                placeholder={t("contact.form.messagePlaceholder")}
                 required
               ></textarea>
             </div>
 
             <div style={{ display: "flex", justifyContent: "center" }}>
             <button className="button button--flex">
-              Send Message
+              {t("contact.form.send")}
               <svg
                 className="button__icon"
                 xmlns="http://www.w3.org/2000/svg"

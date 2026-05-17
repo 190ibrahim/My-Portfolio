@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { GitHubCalendar } from "react-github-calendar";
 import "./github.css";
 import { trackEvent } from "../../utils/track";
@@ -12,16 +13,30 @@ const YEARS = Array.from(
 );
 
 const Github = () => {
+  const { t, i18n } = useTranslation();
+  const isDe = i18n.language?.startsWith("de");
   // null = default rolling "last year" view; otherwise a specific calendar year
   const [year, setYear] = useState(null);
   const activeYear = year ?? currentYear;
   const calendarYear = year ?? "last";
   const fallbackYear = year ?? currentYear;
 
+  const calendarLabels = isDe
+    ? {
+        months: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
+        weekdays: ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
+        totalCount:
+          calendarYear === "last"
+            ? "{{count}} Beiträge im letzten Jahr"
+            : "{{count}} Beiträge im Jahr {{year}}",
+        legend: { less: "weniger", more: "mehr" },
+      }
+    : undefined;
+
   return (
     <section className="github section" id="github">
-      <h2 className="section__title">GitHub Activity</h2>
-      <span className="section__subtitle">A snapshot of my open-source work</span>
+      <h2 className="section__title">{t("github.title")}</h2>
+      <span className="section__subtitle">{t("github.subtitle")}</span>
 
       <div className="github__container container">
         <div className="github__years" role="tablist">
@@ -48,7 +63,8 @@ const Github = () => {
             blockSize={12}
             blockMargin={4}
             fontSize={14}
-            errorMessage="No GitHub activity for this year."
+            errorMessage={isDe ? "Keine GitHub-Aktivität für dieses Jahr." : "No GitHub activity for this year."}
+            labels={calendarLabels}
             transformData={(data) => {
               if (data && data.length > 0) return data;
               const days = [];
@@ -74,7 +90,7 @@ const Github = () => {
           onClick={() => trackEvent("outbound-github", "GitHub clicked from activity section")}
         >
           <i className="bx bxl-github"></i>
-          View Full Profile
+          {t("github.viewProfile")}
         </a>
       </div>
     </section>

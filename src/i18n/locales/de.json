@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "education": "Ausbildung",
+    "experience": "Berufserfahrung",
+    "portfolio": "Portfolio",
+    "skills": "Kenntnisse",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "title": "Ich bin Ibrahim",
+    "subtitle": "MSc-Student für Feldrobotik",
+    "description": "Erasmus-Mundus-Stipendiat, spezialisiert auf Robotik, künstliche Intelligenz und autonome Systeme, erfahren in ROS, Python und maschinellem Lernen, auf der Suche nach einer Forschungs- oder Ingenieursstelle im Bereich der Robotik.",
+    "info": {
+      "role": "Software-Robotik-Praktikant @ W.I.S. Sicherheit",
+      "location": "Berlin, Deutschland",
+      "relocation": "Offen für einen Umzug"
+    },
+    "buttons": {
+      "sayHello": "Hallo sagen",
+      "downloadCV": "Lebenslauf herunterladen"
+    },
+    "scrollDown": "Nach unten scrollen"
+  },
+  "qualification": {
+    "education": {
+      "title": "Ausbildung",
+      "subtitle": "Mein akademischer Werdegang"
+    },
+    "experience": {
+      "title": "Berufserfahrung",
+      "subtitle": "Mein beruflicher Werdegang"
+    }
+  },
+  "work": {
+    "title": "Portfolio",
+    "subtitle": "Aktuelle Arbeiten",
+    "filters": {
+      "all": "Alle",
+      "robotics": "Robotik",
+      "aiml": "KI / ML",
+      "software": "Software"
+    },
+    "details": "Details",
+    "github": "GitHub",
+    "viewOnGithub": "Auf GitHub ansehen",
+    "liveDemo": "Live-Demo",
+    "highlights": "Highlights",
+    "demoSoon": "Demo folgt in Kürze",
+    "featured": "Ausgewählt",
+    "close": "Schließen",
+    "roles": {
+      "solo": "Einzelprojekt",
+      "team2": "Team aus 2 Personen",
+      "team3": "Team aus 3 Personen",
+      "team4": "Team aus 4 Personen",
+      "teamProject": "Teamprojekt",
+      "bscThesis": "BSc-Abschlussarbeit"
+    }
+  },
+  "github": {
+    "title": "GitHub-Aktivität",
+    "subtitle": "Ein Einblick in meine Open-Source-Arbeit",
+    "viewProfile": "Vollständiges Profil ansehen"
+  },
+  "skills": {
+    "title": "Kenntnisse",
+    "subtitle": "Gruppiert nach Häufigkeit der Nutzung",
+    "categories": {
+      "currentlyUsing": {
+        "title": "Aktuell im Einsatz",
+        "note": "Aktiv in aktuellen Studien und Projekten"
+      },
+      "comfortable": {
+        "title": "Gut beherrscht",
+        "note": "Solide Arbeitskenntnisse — sofort einsatzbereit"
+      },
+      "familiar": {
+        "title": "Vertraut mit",
+        "note": "In früheren Projekten genutzt, Auffrischung nötig"
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Kontaktiere mich",
+    "talkToMe": "Sprich mich an",
+    "haveSomethingToSay": "Hast du etwas zu sagen?",
+    "cards": {
+      "email": "E-Mail",
+      "writeMe": "Schreib mir",
+      "linkedin": "LinkedIn",
+      "connectWithMe": "Vernetze dich mit mir",
+      "github": "GitHub",
+      "seeMyWork": "Meine Arbeit ansehen"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Trage deinen Namen ein",
+      "mail": "E-Mail",
+      "mailPlaceholder": "Trage deine E-Mail-Adresse ein",
+      "message": "Nachricht",
+      "messagePlaceholder": "Schreibe deine Nachricht",
+      "send": "Nachricht senden"
+    },
+    "toasts": {
+      "missingKey": "EmailJS Public Key fehlt.",
+      "success": "E-Mail erfolgreich gesendet!",
+      "fail": "E-Mail konnte nicht gesendet werden."
+    }
+  },
+  "footer": {
+    "experience": "Berufserfahrung",
+    "copyright": "© Alle Rechte vorbehalten"
+  },
+  "language": {
+    "toggle": "Sprache wechseln",
+    "en": "EN",
+    "de": "DE"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "home": "Home",
+    "education": "Education",
+    "experience": "Experience",
+    "portfolio": "Portfolio",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "I am Ibrahim",
+    "subtitle": "MSc Field Robotics Student",
+    "description": "Erasmus Mundus Scholarship awardee, specializing in robotics, artificial intelligence, and autonomous systems, skilled in ROS, Python and machine learning, seeking a research or engineering role in the field of robotics.",
+    "info": {
+      "role": "Software Robotics Intern @ W.I.S. Sicherheit",
+      "location": "Berlin, Germany",
+      "relocation": "Open to relocation"
+    },
+    "buttons": {
+      "sayHello": "Say Hello",
+      "downloadCV": "Download CV"
+    },
+    "scrollDown": "Scroll Down"
+  },
+  "qualification": {
+    "education": {
+      "title": "Education",
+      "subtitle": "My academic background"
+    },
+    "experience": {
+      "title": "Experience",
+      "subtitle": "My professional journey"
+    }
+  },
+  "work": {
+    "title": "Portfolio",
+    "subtitle": "Most recent work",
+    "filters": {
+      "all": "All",
+      "robotics": "Robotics",
+      "aiml": "AI / ML",
+      "software": "Software"
+    },
+    "details": "Details",
+    "github": "GitHub",
+    "viewOnGithub": "View on GitHub",
+    "liveDemo": "Live Demo",
+    "highlights": "Highlights",
+    "demoSoon": "Demo coming soon",
+    "featured": "Featured",
+    "close": "Close",
+    "roles": {
+      "solo": "Solo project",
+      "team2": "Team of 2",
+      "team3": "Team of 3",
+      "team4": "Team of 4",
+      "teamProject": "Team project",
+      "bscThesis": "BSc Thesis"
+    }
+  },
+  "github": {
+    "title": "GitHub Activity",
+    "subtitle": "A snapshot of my open-source work",
+    "viewProfile": "View Full Profile"
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Grouped by how I use them",
+    "categories": {
+      "currentlyUsing": {
+        "title": "Currently Using",
+        "note": "Active in current studies and projects"
+      },
+      "comfortable": {
+        "title": "Comfortable",
+        "note": "Solid working knowledge — can pick up immediately"
+      },
+      "familiar": {
+        "title": "Familiar With",
+        "note": "Used in past projects, refresher needed"
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in touch",
+    "subtitle": "Contact Me",
+    "talkToMe": "Talk to me",
+    "haveSomethingToSay": "Have something to say?",
+    "cards": {
+      "email": "Email",
+      "writeMe": "Write me",
+      "linkedin": "LinkedIn",
+      "connectWithMe": "Connect With Me",
+      "github": "GitHub",
+      "seeMyWork": "See My Work"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Insert your name",
+      "mail": "Mail",
+      "mailPlaceholder": "Insert your email",
+      "message": "Message",
+      "messagePlaceholder": "Write your message",
+      "send": "Send Message"
+    },
+    "toasts": {
+      "missingKey": "EmailJS public key is missing.",
+      "success": "Email sent successfully!",
+      "fail": "Failed to send email."
+    }
+  },
+  "footer": {
+    "experience": "Experience",
+    "copyright": "© All rigths reserved"
+  },
+  "language": {
+    "toggle": "Switch language",
+    "en": "EN",
+    "de": "DE"
+  }
+}

@@ -1,10 +1,6 @@
 // Project schema:
-// {
-//   id, slug, project, title, category, year, role,
-//   stack: string[], description, features: string[],
-//   media: { type: 'video' | 'image', src, poster? },
-//   repository, demoURL?, featured
-// }
+// Fields stored as { en, de } objects are localized via the tr() helper.
+// project, title, description, features[], role are bilingual.
 
 export const CATEGORIES = {
   ALL: "all",
@@ -13,32 +9,50 @@ export const CATEGORIES = {
   SOFTWARE: "software",
 };
 
-export const projectsNav = [
-  { name: "All", value: CATEGORIES.ALL },
-  { name: "Robotics", value: CATEGORIES.ROBOTICS },
-  { name: "AI / ML", value: CATEGORIES.AI_ML },
-  { name: "Software", value: CATEGORIES.SOFTWARE },
-];
+// Note: filter labels are localized via i18n in Works.jsx (work.filters.*)
 
 export const projectsData = [
   // ==================== ROBOTICS ====================
   {
     id: 20,
     slug: "warehouse-surveillance",
-    project: "Warehouse Surveillance Robot",
-    title: "Warehouse<br />Surveillance Robot",
+    project: {
+      en: "Warehouse Surveillance Robot",
+      de: "Lager-Überwachungsroboter",
+    },
+    title: {
+      en: "Warehouse<br />Surveillance Robot",
+      de: "Lager-Überwachungs-<br />roboter",
+    },
     category: CATEGORIES.ROBOTICS,
     year: "2025",
-    role: "Team of 3",
+    role: { en: "Team of 3", de: "Team aus 3 Personen" },
     stack: ["ROS", "YOLOv8", "ByteTrack", "Python", "Gazebo"],
-    description:
-      "Autonomous warehouse security robot using YOLOv8 person detection, ByteTrack multi-object tracking, and ArUco marker authorization to identify and pursue intruders in real time.",
+    description: {
+      en: "Autonomous warehouse security robot using YOLOv8 person detection, ByteTrack multi-object tracking, and ArUco marker authorization to identify and pursue intruders in real time.",
+      de: "Autonomer Lager-Sicherheitsroboter, der YOLOv8-Personenerkennung, ByteTrack-Multi-Objekt-Tracking und ArUco-Marker-Autorisierung nutzt, um Eindringlinge in Echtzeit zu identifizieren und zu verfolgen.",
+    },
     features: [
-      "YOLOv8n detects people at 30 FPS; ByteTrack maintains persistent track IDs across occlusions",
-      "ArUco chest-ROI scan authorizes workers (ID=7 = green) and flags intruders (red)",
-      "Reactive controller pursues the largest intruder with proportional angular control and safe approach speed",
-      "Tested on real webcam and in a Gazebo/Pedsim warehouse with 9 autonomous agents",
-      "Full ROS Noetic pipeline: camera → detection → tracking → authorization → /cmd_vel",
+      {
+        en: "YOLOv8n detects people at 30 FPS; ByteTrack maintains persistent track IDs across occlusions",
+        de: "YOLOv8n erkennt Personen mit 30 FPS; ByteTrack hält Tracking-IDs auch bei Verdeckungen aufrecht",
+      },
+      {
+        en: "ArUco chest-ROI scan authorizes workers (ID=7 = green) and flags intruders (red)",
+        de: "ArUco-Brust-ROI-Scan autorisiert Mitarbeiter (ID=7 = grün) und markiert Eindringlinge (rot)",
+      },
+      {
+        en: "Reactive controller pursues the largest intruder with proportional angular control and safe approach speed",
+        de: "Reaktiver Regler verfolgt den größten Eindringling mit proportionaler Winkelregelung und sicherer Annäherungsgeschwindigkeit",
+      },
+      {
+        en: "Tested on real webcam and in a Gazebo/Pedsim warehouse with 9 autonomous agents",
+        de: "Getestet mit einer echten Webcam und in einer Gazebo/Pedsim-Lagerumgebung mit 9 autonomen Agenten",
+      },
+      {
+        en: "Full ROS Noetic pipeline: camera → detection → tracking → authorization → /cmd_vel",
+        de: "Vollständige ROS-Noetic-Pipeline: Kamera → Erkennung → Tracking → Autorisierung → /cmd_vel",
+      },
     ],
     media: {
       type: "video",
@@ -50,20 +64,43 @@ export const projectsData = [
   {
     id: 1,
     slug: "stereo-visual-odometry-kitti",
-    project: "Stereo Visual Odometry (KITTI)",
-    title: "Stereo Visual<br />Odometry — KITTI",
+    project: {
+      en: "Stereo Visual Odometry (KITTI)",
+      de: "Stereo-Visual-Odometry (KITTI)",
+    },
+    title: {
+      en: "Stereo Visual<br />Odometry — KITTI",
+      de: "Stereo-Visual-<br />Odometry — KITTI",
+    },
     category: CATEGORIES.ROBOTICS,
     year: "2025",
-    role: "Solo project",
+    role: { en: "Solo project", de: "Einzelprojekt" },
     stack: ["Python", "OpenCV", "NumPy", "KITTI"],
-    description:
-      "A stereo visual odometry pipeline that estimates camera motion and reconstructs sparse 3D points from KITTI stereo sequences.",
+    description: {
+      en: "A stereo visual odometry pipeline that estimates camera motion and reconstructs sparse 3D points from KITTI stereo sequences.",
+      de: "Eine Stereo-Visual-Odometry-Pipeline, die Kamerabewegungen schätzt und dünn besetzte 3D-Punkte aus KITTI-Stereosequenzen rekonstruiert.",
+    },
     features: [
-      "Stereo matching and triangulation to recover 3D landmarks from left/right image pairs",
-      "Feature detection, descriptor matching, and temporal tracking across frames",
-      "Relative pose estimation from essential-matrix decomposition with bundle-adjusted refinement",
-      "Outputs KITTI-format trajectory files and visualizes estimated vs. ground-truth paths",
-      "Implemented in Python with OpenCV and NumPy for reproducible experiments",
+      {
+        en: "Stereo matching and triangulation to recover 3D landmarks from left/right image pairs",
+        de: "Stereo-Matching und Triangulation zur Rekonstruktion von 3D-Landmarken aus linken/rechten Bildpaaren",
+      },
+      {
+        en: "Feature detection, descriptor matching, and temporal tracking across frames",
+        de: "Feature-Erkennung, Deskriptor-Matching und zeitliches Tracking über Frames hinweg",
+      },
+      {
+        en: "Relative pose estimation from essential-matrix decomposition with bundle-adjusted refinement",
+        de: "Relative Posenschätzung durch Zerlegung der essenziellen Matrix mit Bundle-Adjustment-Verfeinerung",
+      },
+      {
+        en: "Outputs KITTI-format trajectory files and visualizes estimated vs. ground-truth paths",
+        de: "Ausgabe von Trajektoriedateien im KITTI-Format und Visualisierung von geschätzten vs. Ground-Truth-Pfaden",
+      },
+      {
+        en: "Implemented in Python with OpenCV and NumPy for reproducible experiments",
+        de: "In Python mit OpenCV und NumPy implementiert für reproduzierbare Experimente",
+      },
     ],
     media: {
       type: "video",
@@ -75,18 +112,35 @@ export const projectsData = [
   {
     id: 2,
     slug: "exploration-global-local-planning",
-    project: "Exploration with Global–Local Planning Architecture",
-    title: "Exploration —<br />Global &amp; Local Planning",
+    project: {
+      en: "Exploration with Global–Local Planning Architecture",
+      de: "Exploration mit globaler & lokaler Planungsarchitektur",
+    },
+    title: {
+      en: "Exploration —<br />Global &amp; Local Planning",
+      de: "Exploration —<br />Globale &amp; lokale Planung",
+    },
     category: CATEGORIES.ROBOTICS,
     year: "2025",
-    role: "Team of 3",
+    role: { en: "Team of 3", de: "Team aus 3 Personen" },
     stack: ["ROS", "Python", "RRT*", "DWA"],
-    description:
-      "A hybrid exploration framework integrating frontier detection for goal generation with global and local planning strategies in ROS.",
+    description: {
+      en: "A hybrid exploration framework integrating frontier detection for goal generation with global and local planning strategies in ROS.",
+      de: "Ein hybrides Explorations-Framework, das Frontier-Erkennung zur Zielgenerierung mit globalen und lokalen Planungsstrategien in ROS verbindet.",
+    },
     features: [
-      "Global RRT* planner and local DWA controller for autonomous navigation",
-      "Frontier clustering, centroid extraction, and viewpoint validation",
-      "Path smoothing and waypoint reduction over occupancy-grid maps",
+      {
+        en: "Global RRT* planner and local DWA controller for autonomous navigation",
+        de: "Globaler RRT*-Planer und lokaler DWA-Regler für autonome Navigation",
+      },
+      {
+        en: "Frontier clustering, centroid extraction, and viewpoint validation",
+        de: "Frontier-Clustering, Schwerpunktextraktion und Viewpoint-Validierung",
+      },
+      {
+        en: "Path smoothing and waypoint reduction over occupancy-grid maps",
+        de: "Pfadglättung und Reduzierung von Wegpunkten auf Occupancy-Grid-Karten",
+      },
     ],
     media: {
       type: "video",
@@ -98,18 +152,35 @@ export const projectsData = [
   {
     id: 3,
     slug: "vehicle-manipulator-system",
-    project: "Vehicle–Manipulator System",
-    title: "Vehicle–Manipulator<br />System",
+    project: {
+      en: "Vehicle–Manipulator System",
+      de: "Fahrzeug-Manipulator-System",
+    },
+    title: {
+      en: "Vehicle–Manipulator<br />System",
+      de: "Fahrzeug-Manipulator-<br />System",
+    },
     category: CATEGORIES.ROBOTICS,
     year: "2024",
-    role: "Team of 3",
+    role: { en: "Team of 3", de: "Team aus 3 Personen" },
     stack: ["ROS", "Behavior Trees", "ArUco", "Python"],
-    description:
-      "Control architecture for coordinated motion between a mobile base and a manipulator for autonomous intervention tasks.",
+    description: {
+      en: "Control architecture for coordinated motion between a mobile base and a manipulator for autonomous intervention tasks.",
+      de: "Regelungsarchitektur für die koordinierte Bewegung einer mobilen Basis und eines Manipulators für autonome Interventionsaufgaben.",
+    },
     features: [
-      "Behavior-tree control structure in ROS for multi-task coordination",
-      "Kinematics and task-priority controllers for precise end-effector control",
-      "ArUco-marker-based visual feedback for autonomous pick-and-place",
+      {
+        en: "Behavior-tree control structure in ROS for multi-task coordination",
+        de: "Behavior-Tree-Steuerstruktur in ROS für die Koordination mehrerer Aufgaben",
+      },
+      {
+        en: "Kinematics and task-priority controllers for precise end-effector control",
+        de: "Kinematik- und Task-Priority-Regler für präzise Endeffektor-Steuerung",
+      },
+      {
+        en: "ArUco-marker-based visual feedback for autonomous pick-and-place",
+        de: "ArUco-Marker-basiertes visuelles Feedback für autonomes Pick-and-Place",
+      },
     ],
     media: {
       type: "video",
@@ -121,18 +192,35 @@ export const projectsData = [
   {
     id: 4,
     slug: "graph-slam-line-features",
-    project: "Graph SLAM with Line Features",
-    title: "Graph SLAM<br />with Line Features",
+    project: {
+      en: "Graph SLAM with Line Features",
+      de: "Graph SLAM mit Linien-Features",
+    },
+    title: {
+      en: "Graph SLAM<br />with Line Features",
+      de: "Graph SLAM<br />mit Linien-Features",
+    },
     category: CATEGORIES.ROBOTICS,
     year: "2024",
-    role: "Team of 3",
+    role: { en: "Team of 3", de: "Team aus 3 Personen" },
     stack: ["Python", "GTSAM", "LiDAR", "EKF"],
-    description:
-      "Graph SLAM using LiDAR-derived line features for robust localization and mapping.",
+    description: {
+      en: "Graph SLAM using LiDAR-derived line features for robust localization and mapping.",
+      de: "Graph SLAM unter Verwendung von aus LiDAR abgeleiteten Linien-Features für robuste Lokalisierung und Kartierung.",
+    },
     features: [
-      "EKF pose estimation combined with LiDAR line features",
-      "Line perception via split-and-merge segmentation with covariance estimation",
-      "Custom GTSAM factor graph with pose and observation factors for trajectory optimization",
+      {
+        en: "EKF pose estimation combined with LiDAR line features",
+        de: "EKF-Posenschätzung kombiniert mit LiDAR-Linien-Features",
+      },
+      {
+        en: "Line perception via split-and-merge segmentation with covariance estimation",
+        de: "Linien-Wahrnehmung durch Split-and-Merge-Segmentierung mit Kovarianzschätzung",
+      },
+      {
+        en: "Custom GTSAM factor graph with pose and observation factors for trajectory optimization",
+        de: "Eigener GTSAM-Faktorgraph mit Posen- und Beobachtungsfaktoren zur Trajektorienoptimierung",
+      },
     ],
     media: {
       type: "video",
@@ -144,18 +232,35 @@ export const projectsData = [
   {
     id: 5,
     slug: "map-based-localization-ekf",
-    project: "Map-Based Localization using EKF",
-    title: "Map-Based Localization<br />using EKF",
+    project: {
+      en: "Map-Based Localization using EKF",
+      de: "Kartenbasierte Lokalisierung mit EKF",
+    },
+    title: {
+      en: "Map-Based Localization<br />using EKF",
+      de: "Kartenbasierte<br />Lokalisierung mit EKF",
+    },
     category: CATEGORIES.ROBOTICS,
     year: "2024",
-    role: "Solo project",
+    role: { en: "Solo project", de: "Einzelprojekt" },
     stack: ["Python", "NumPy", "Matplotlib"],
-    description:
-      "Extended Kalman Filter for accurate robot localization using landmark-based measurements.",
+    description: {
+      en: "Extended Kalman Filter for accurate robot localization using landmark-based measurements.",
+      de: "Extended Kalman Filter für eine präzise Roboterlokalisierung auf Basis landmarkenbasierter Messungen.",
+    },
     features: [
-      "Designed motion and measurement models",
-      "Real-time state estimation",
-      "Implemented in Python with NumPy and Matplotlib",
+      {
+        en: "Designed motion and measurement models",
+        de: "Entwurf von Bewegungs- und Messmodellen",
+      },
+      {
+        en: "Real-time state estimation",
+        de: "Echtzeit-Zustandsschätzung",
+      },
+      {
+        en: "Implemented in Python with NumPy and Matplotlib",
+        de: "Implementiert in Python mit NumPy und Matplotlib",
+      },
     ],
     media: {
       type: "video",
@@ -163,45 +268,81 @@ export const projectsData = [
     },
     repository: "https://github.com/190ibrahim/Map_Based_Localization_EKF",
   },
-   {
-  id: 14,
-  slug: "feature-ekf-slam-localization",
-  project: "Feature EKF SLAM Localization",
-  title: "Feature EKF SLAM<br />Localization",
-  category: CATEGORIES.ROBOTICS,
-  year: "2024",
-  role: "Team of 2",
-  stack: ["Python", "NumPy", "Matplotlib", "EKF SLAM"],
-  description:
-    "Feature-based Extended Kalman Filter SLAM for simultaneous robot localization and landmark mapping without a known map.",
-  features: [
-    "Implemented EKF SLAM prediction and update steps for a differential-drive robot",
-    "Added landmark initialization when new Cartesian features are observed",
-    "Used data association to match sensor observations with mapped landmarks",
-    "Visualized robot trajectory, landmark estimates, uncertainty ellipses, and error statistics",
-  ],
-  media: {
-    type: "video",
-    src: "/media/projects/feature-ekf-slam-localization.mp4",
+  {
+    id: 14,
+    slug: "feature-ekf-slam-localization",
+    project: {
+      en: "Feature EKF SLAM Localization",
+      de: "Feature-EKF-SLAM-Lokalisierung",
+    },
+    title: {
+      en: "Feature EKF SLAM<br />Localization",
+      de: "Feature-EKF-SLAM-<br />Lokalisierung",
+    },
+    category: CATEGORIES.ROBOTICS,
+    year: "2024",
+    role: { en: "Team of 2", de: "Team aus 2 Personen" },
+    stack: ["Python", "NumPy", "Matplotlib", "EKF SLAM"],
+    description: {
+      en: "Feature-based Extended Kalman Filter SLAM for simultaneous robot localization and landmark mapping without a known map.",
+      de: "Feature-basiertes Extended Kalman Filter SLAM für simultane Roboterlokalisierung und Landmarkenkartierung ohne vorgegebene Karte.",
+    },
+    features: [
+      {
+        en: "Implemented EKF SLAM prediction and update steps for a differential-drive robot",
+        de: "Implementierung von EKF-SLAM-Prädiktions- und Update-Schritten für einen Differentialantriebs-Roboter",
+      },
+      {
+        en: "Added landmark initialization when new Cartesian features are observed",
+        de: "Landmarken-Initialisierung beim Beobachten neuer kartesischer Features",
+      },
+      {
+        en: "Used data association to match sensor observations with mapped landmarks",
+        de: "Datenassoziation zum Abgleich von Sensorbeobachtungen mit kartierten Landmarken",
+      },
+      {
+        en: "Visualized robot trajectory, landmark estimates, uncertainty ellipses, and error statistics",
+        de: "Visualisierung von Robotertrajektorie, Landmarkenschätzungen, Unsicherheits-Ellipsen und Fehlerstatistiken",
+      },
+    ],
+    media: {
+      type: "video",
+      src: "/media/projects/feature-ekf-slam-localization.mp4",
+    },
+    repository: "https://github.com/190ibrahim/Feature-EKF-Slam-Localization.git",
   },
-  repository: "https://github.com/190ibrahim/Feature-EKF-Slam-Localization.git",
-}
-,
   {
     id: 6,
     slug: "particle-filter-localization",
-    project: "Particle Filter Robot Localization",
-    title: "Particle Filter<br />Robot Localization",
+    project: {
+      en: "Particle Filter Robot Localization",
+      de: "Roboterlokalisierung mit Partikelfilter",
+    },
+    title: {
+      en: "Particle Filter<br />Robot Localization",
+      de: "Partikelfilter-<br />Roboterlokalisierung",
+    },
     category: CATEGORIES.ROBOTICS,
     year: "2024",
-    role: "Solo project",
+    role: { en: "Solo project", de: "Einzelprojekt" },
     stack: ["Python", "NumPy", "Matplotlib"],
-    description:
-      "Particle Filter for estimating a robot's position from sensor data and motion models.",
+    description: {
+      en: "Particle Filter for estimating a robot's position from sensor data and motion models.",
+      de: "Partikelfilter zur Schätzung der Roboterposition aus Sensordaten und Bewegungsmodellen.",
+    },
     features: [
-      "Particle sampling and resampling",
-      "Motion and observation models",
-      "Implemented in Python with NumPy and Matplotlib",
+      {
+        en: "Particle sampling and resampling",
+        de: "Partikel-Sampling und Resampling",
+      },
+      {
+        en: "Motion and observation models",
+        de: "Bewegungs- und Beobachtungsmodelle",
+      },
+      {
+        en: "Implemented in Python with NumPy and Matplotlib",
+        de: "Implementiert in Python mit NumPy und Matplotlib",
+      },
     ],
     media: {
       type: "video",
@@ -209,24 +350,46 @@ export const projectsData = [
     },
     repository: "https://github.com/190ibrahim/Particl_Filter_Robot_Localization-",
   },
- 
   {
     id: 18,
     slug: "astar-path-planning",
-    project: "A* Path Planning",
-    title: "A* Path<br />Planning",
+    project: {
+      en: "A* Path Planning",
+      de: "A*-Pfadplanung",
+    },
+    title: {
+      en: "A* Path<br />Planning",
+      de: "A*-<br />Pfadplanung",
+    },
     category: CATEGORIES.ROBOTICS,
     year: "2024",
-    role: "Team of 2",
+    role: { en: "Team of 2", de: "Team aus 2 Personen" },
     stack: ["Python", "A*", "NumPy", "Matplotlib", "PIL"],
-    description:
-      "Discrete A* algorithm for optimal path planning on 2D grid maps, supporting both 4-connectivity and 8-connectivity with Euclidean heuristic.",
+    description: {
+      en: "Discrete A* algorithm for optimal path planning on 2D grid maps, supporting both 4-connectivity and 8-connectivity with Euclidean heuristic.",
+      de: "Diskreter A*-Algorithmus für optimale Pfadplanung auf 2D-Gitterkarten, mit Unterstützung für 4er- und 8er-Konnektivität sowie euklidischer Heuristik.",
+    },
     features: [
-      "A* with connect-4 and connect-8 neighbour expansion on binarized grid maps",
-      "Euclidean distance heuristic with priority-queue open set for O(log n) node expansion",
-      "Visibility graph construction and shortest-path search on polygon environments",
-      "Tested across eight maps of increasing complexity, from open fields to dense mazes",
-      "Outputs optimal path coordinates and total Euclidean path cost",
+      {
+        en: "A* with connect-4 and connect-8 neighbour expansion on binarized grid maps",
+        de: "A* mit 4er- und 8er-Nachbarschaftsexpansion auf binarisierten Gitterkarten",
+      },
+      {
+        en: "Euclidean distance heuristic with priority-queue open set for O(log n) node expansion",
+        de: "Euklidische Distanz-Heuristik mit Priority-Queue als Open-Set für O(log n)-Knotenexpansion",
+      },
+      {
+        en: "Visibility graph construction and shortest-path search on polygon environments",
+        de: "Aufbau von Sichtbarkeitsgraphen und Kürzeste-Wege-Suche in Polygon-Umgebungen",
+      },
+      {
+        en: "Tested across eight maps of increasing complexity, from open fields to dense mazes",
+        de: "Getestet auf acht Karten zunehmender Komplexität, von offenen Feldern bis zu dichten Labyrinthen",
+      },
+      {
+        en: "Outputs optimal path coordinates and total Euclidean path cost",
+        de: "Ausgabe der optimalen Pfadkoordinaten und gesamten euklidischen Pfadkosten",
+      },
     ],
     media: {
       type: "video",
@@ -237,20 +400,43 @@ export const projectsData = [
   {
     id: 19,
     slug: "aruco-opencv",
-    project: "ArUco Markers & Augmented Reality",
-    title: "ArUco Markers<br />&amp; Augmented Reality",
+    project: {
+      en: "ArUco Markers & Augmented Reality",
+      de: "ArUco-Marker & Augmented Reality",
+    },
+    title: {
+      en: "ArUco Markers<br />&amp; Augmented Reality",
+      de: "ArUco-Marker<br />&amp; Augmented Reality",
+    },
     category: CATEGORIES.ROBOTICS,
     year: "2025",
-    role: "Team of 2",
+    role: { en: "Team of 2", de: "Team aus 2 Personen" },
     stack: ["C++", "OpenCV", "ArUco", "CMake"],
-    description:
-      "A five-lab series progressing from ArUco marker generation and detection to full camera calibration and real-time augmented reality with pose estimation.",
+    description: {
+      en: "A five-lab series progressing from ArUco marker generation and detection to full camera calibration and real-time augmented reality with pose estimation.",
+      de: "Eine Reihe von fünf Übungen, die von der Erzeugung und Erkennung von ArUco-Markern über die vollständige Kamerakalibrierung bis hin zu Echtzeit-Augmented-Reality mit Posenschätzung reicht.",
+    },
     features: [
-      "Generated single ArUco markers and grid boards from OpenCV dictionaries",
-      "Real-time marker detection with green border overlay and ID display",
-      "Camera calibration using an ArUco board — estimated intrinsics and distortion coefficients",
-      "6-DoF pose estimation per marker using calibrated camera parameters",
-      "Augmented reality: virtual 3D cube rendered on top of live marker feed",
+      {
+        en: "Generated single ArUco markers and grid boards from OpenCV dictionaries",
+        de: "Erzeugung einzelner ArUco-Marker und Grid-Boards aus OpenCV-Wörterbüchern",
+      },
+      {
+        en: "Real-time marker detection with green border overlay and ID display",
+        de: "Echtzeit-Markererkennung mit grünem Rahmen-Overlay und ID-Anzeige",
+      },
+      {
+        en: "Camera calibration using an ArUco board — estimated intrinsics and distortion coefficients",
+        de: "Kamerakalibrierung mit einem ArUco-Board — Schätzung der intrinsischen Parameter und Verzeichnungskoeffizienten",
+      },
+      {
+        en: "6-DoF pose estimation per marker using calibrated camera parameters",
+        de: "6-DoF-Posenschätzung pro Marker anhand der kalibrierten Kameraparameter",
+      },
+      {
+        en: "Augmented reality: virtual 3D cube rendered on top of live marker feed",
+        de: "Augmented Reality: virtueller 3D-Würfel, der auf den Live-Marker-Feed gerendert wird",
+      },
     ],
     media: {
       type: "video",
@@ -261,20 +447,43 @@ export const projectsData = [
   {
     id: 17,
     slug: "rrt-path-planning",
-    project: "RRT & RRT* Path Planning",
-    title: "RRT &amp; RRT*<br />Path Planning",
+    project: {
+      en: "RRT & RRT* Path Planning",
+      de: "RRT- & RRT*-Pfadplanung",
+    },
+    title: {
+      en: "RRT &amp; RRT*<br />Path Planning",
+      de: "RRT &amp; RRT*<br />Pfadplanung",
+    },
     category: CATEGORIES.ROBOTICS,
     year: "2024",
-    role: "Team of 2",
+    role: { en: "Team of 2", de: "Team aus 2 Personen" },
     stack: ["Python", "RRT", "RRT*", "NumPy", "Matplotlib"],
-    description:
-      "Sampling-based motion planning using RRT and RRT* algorithms to solve 2D path planning problems across grid map environments of varying complexity.",
+    description: {
+      en: "Sampling-based motion planning using RRT and RRT* algorithms to solve 2D path planning problems across grid map environments of varying complexity.",
+      de: "Sampling-basierte Bewegungsplanung mit RRT- und RRT*-Algorithmen zur Lösung von 2D-Pfadplanungsproblemen in Gitterkarten unterschiedlicher Komplexität.",
+    },
     features: [
-      "Implemented RRT and RRT* from scratch in Python for 2D grid maps",
-      "Binarized grayscale map images to define free vs. occupied space",
-      "Path smoothing to reduce waypoints while maintaining collision-free trajectories",
-      "Tested on four maps ranging from open spaces to complex mazes",
-      "RRT* converges to an asymptotically optimal path via rewiring",
+      {
+        en: "Implemented RRT and RRT* from scratch in Python for 2D grid maps",
+        de: "RRT und RRT* von Grund auf in Python für 2D-Gitterkarten implementiert",
+      },
+      {
+        en: "Binarized grayscale map images to define free vs. occupied space",
+        de: "Binarisierung von Graustufen-Kartenbildern zur Definition von freiem und belegtem Raum",
+      },
+      {
+        en: "Path smoothing to reduce waypoints while maintaining collision-free trajectories",
+        de: "Pfadglättung zur Reduktion von Wegpunkten bei gleichzeitiger Beibehaltung kollisionsfreier Trajektorien",
+      },
+      {
+        en: "Tested on four maps ranging from open spaces to complex mazes",
+        de: "Getestet auf vier Karten von offenen Räumen bis zu komplexen Labyrinthen",
+      },
+      {
+        en: "RRT* converges to an asymptotically optimal path via rewiring",
+        de: "RRT* konvergiert durch Rewiring zu einem asymptotisch optimalen Pfad",
+      },
     ],
     media: {
       type: "video",
@@ -285,18 +494,35 @@ export const projectsData = [
   {
     id: 7,
     slug: "feature-extraction-image-registration",
-    project: "Feature Extraction & Image Registration",
-    title: "Feature Extraction<br />&amp; Image Registration",
+    project: {
+      en: "Feature Extraction & Image Registration",
+      de: "Feature-Extraktion & Bildregistrierung",
+    },
+    title: {
+      en: "Feature Extraction<br />&amp; Image Registration",
+      de: "Feature-Extraktion<br />&amp; Bildregistrierung",
+    },
     category: CATEGORIES.ROBOTICS,
     year: "2024",
-    role: "Team of 2",
+    role: { en: "Team of 2", de: "Team aus 2 Personen" },
     stack: ["Python", "OpenCV", "SIFT", "ORB", "RANSAC"],
-    description:
-      "Feature-based image registration pipeline using SIFT, ORB, and RANSAC.",
+    description: {
+      en: "Feature-based image registration pipeline using SIFT, ORB, and RANSAC.",
+      de: "Feature-basierte Bildregistrierungs-Pipeline mit SIFT, ORB und RANSAC.",
+    },
     features: [
-      "Extracted key points and descriptors",
-      "Applied transformation matrices for image alignment",
-      "Used OpenCV and NumPy for implementation",
+      {
+        en: "Extracted key points and descriptors",
+        de: "Extraktion von Schlüsselpunkten und Deskriptoren",
+      },
+      {
+        en: "Applied transformation matrices for image alignment",
+        de: "Anwendung von Transformationsmatrizen zur Bildausrichtung",
+      },
+      {
+        en: "Used OpenCV and NumPy for implementation",
+        de: "Verwendung von OpenCV und NumPy für die Implementierung",
+      },
     ],
     media: {
       type: "video",
@@ -310,18 +536,35 @@ export const projectsData = [
   {
     id: 8,
     slug: "uxo-segmentation",
-    project: "Sparsely Annotated UXO Segmentation",
-    title: "Sparsely Annotated<br />UXO Segmentation",
+    project: {
+      en: "Sparsely Annotated UXO Segmentation",
+      de: "Spärlich annotierte UXO-Segmentierung",
+    },
+    title: {
+      en: "Sparsely Annotated<br />UXO Segmentation",
+      de: "Spärlich annotierte<br />UXO-Segmentierung",
+    },
     category: CATEGORIES.AI_ML,
     year: "2025",
-    role: "Solo project",
+    role: { en: "Solo project", de: "Einzelprojekt" },
     stack: ["PyTorch", "Python", "Tree Energy Loss"],
-    description:
-      "Weakly supervised semantic segmentation for detecting unexploded ordnance (UXO) using limited pixel annotations.",
+    description: {
+      en: "Weakly supervised semantic segmentation for detecting unexploded ordnance (UXO) using limited pixel annotations.",
+      de: "Schwach überwachte semantische Segmentierung zur Erkennung nicht detonierter Sprengkörper (UXO) mit begrenzten Pixel-Annotationen.",
+    },
     features: [
-      "Tree Energy Loss (TEL) and class-weighted cross-entropy for extreme class imbalance",
-      "Preprocessing and augmentation: patch extraction, photometric transforms",
-      "Trained and compared multiple deep learning models on sparse labels",
+      {
+        en: "Tree Energy Loss (TEL) and class-weighted cross-entropy for extreme class imbalance",
+        de: "Tree Energy Loss (TEL) und klassen­gewichtete Cross-Entropy bei extremem Klassenungleichgewicht",
+      },
+      {
+        en: "Preprocessing and augmentation: patch extraction, photometric transforms",
+        de: "Vorverarbeitung und Augmentierung: Patch-Extraktion, photometrische Transformationen",
+      },
+      {
+        en: "Trained and compared multiple deep learning models on sparse labels",
+        de: "Training und Vergleich mehrerer Deep-Learning-Modelle mit spärlichen Labels",
+      },
     ],
     media: {
       type: "image",
@@ -333,18 +576,35 @@ export const projectsData = [
   {
     id: 9,
     slug: "mlffs-thesis",
-    project: "MLFFs for Transition Metal Complexes (BSc Thesis)",
-    title: "MLFFs for Transition<br />Metal Complexes",
+    project: {
+      en: "MLFFs for Transition Metal Complexes (BSc Thesis)",
+      de: "MLFFs für Übergangsmetallkomplexe (BSc-Abschlussarbeit)",
+    },
+    title: {
+      en: "MLFFs for Transition<br />Metal Complexes",
+      de: "MLFFs für<br />Übergangsmetallkomplexe",
+    },
     category: CATEGORIES.AI_ML,
     year: "2024",
-    role: "BSc Thesis",
+    role: { en: "BSc Thesis", de: "BSc-Abschlussarbeit" },
     stack: ["XGBoost", "Neural Networks", "Python", "tmQM"],
-    description:
-      "Machine learning models predicting the HOMO–LUMO gap in transition metal complexes — achieving an MSE of 0.0004 with XGBoost.",
+    description: {
+      en: "Machine learning models predicting the HOMO–LUMO gap in transition metal complexes — achieving an MSE of 0.0004 with XGBoost.",
+      de: "Machine-Learning-Modelle zur Vorhersage der HOMO–LUMO-Lücke in Übergangsmetallkomplexen — mit einem MSE von 0,0004 unter Verwendung von XGBoost.",
+    },
     features: [
-      "Trained on the tmQM dataset",
-      "XGBoost and neural networks for regression",
-      "Achieved MSE of 0.0004 with XGBoost",
+      {
+        en: "Trained on the tmQM dataset",
+        de: "Trainiert auf dem tmQM-Datensatz",
+      },
+      {
+        en: "XGBoost and neural networks for regression",
+        de: "XGBoost und neuronale Netze für die Regression",
+      },
+      {
+        en: "Achieved MSE of 0.0004 with XGBoost",
+        de: "MSE von 0,0004 mit XGBoost erreicht",
+      },
     ],
     media: {
       type: "image",
@@ -356,18 +616,35 @@ export const projectsData = [
   {
     id: 10,
     slug: "explainable-ai",
-    project: "Explainable AI (XAI)",
-    title: "Explainable AI<br />(XAI)",
+    project: {
+      en: "Explainable AI (XAI)",
+      de: "Erklärbare KI (XAI)",
+    },
+    title: {
+      en: "Explainable AI<br />(XAI)",
+      de: "Erklärbare KI<br />(XAI)",
+    },
     category: CATEGORIES.AI_ML,
     year: "2024",
-    role: "Solo project",
+    role: { en: "Solo project", de: "Einzelprojekt" },
     stack: ["SHAP", "LIME", "Grad-CAM", "Python"],
-    description:
-      "Techniques to improve transparency and interpretability of machine learning models.",
+    description: {
+      en: "Techniques to improve transparency and interpretability of machine learning models.",
+      de: "Methoden zur Verbesserung der Transparenz und Interpretierbarkeit von Machine-Learning-Modellen.",
+    },
     features: [
-      "Implemented SHAP, LIME, and Grad-CAM",
-      "Analyzed feature importance and model decisions",
-      "Applied XAI methods to deep learning models",
+      {
+        en: "Implemented SHAP, LIME, and Grad-CAM",
+        de: "Implementierung von SHAP, LIME und Grad-CAM",
+      },
+      {
+        en: "Analyzed feature importance and model decisions",
+        de: "Analyse der Feature-Wichtigkeit und Modellentscheidungen",
+      },
+      {
+        en: "Applied XAI methods to deep learning models",
+        de: "Anwendung von XAI-Methoden auf Deep-Learning-Modelle",
+      },
     ],
     media: {
       type: "image",
@@ -378,18 +655,35 @@ export const projectsData = [
   {
     id: 11,
     slug: "rl-for-robotics",
-    project: "Reinforcement Learning for Robotics",
-    title: "Reinforcement Learning<br />for Robotics",
+    project: {
+      en: "Reinforcement Learning for Robotics",
+      de: "Reinforcement Learning für Robotik",
+    },
+    title: {
+      en: "Reinforcement Learning<br />for Robotics",
+      de: "Reinforcement Learning<br />für Robotik",
+    },
     category: CATEGORIES.AI_ML,
     year: "2024",
-    role: "Solo project",
+    role: { en: "Solo project", de: "Einzelprojekt" },
     stack: ["TensorFlow", "OpenAI Gym", "DQN"],
-    description:
-      "Deep Q-Learning (DQN) and Policy Gradient methods applied to robotic control.",
+    description: {
+      en: "Deep Q-Learning (DQN) and Policy Gradient methods applied to robotic control.",
+      de: "Deep Q-Learning (DQN) und Policy-Gradient-Methoden, angewandt auf die Robotersteuerung.",
+    },
     features: [
-      "Trained an agent to navigate an environment",
-      "Reward-based learning for decision making",
-      "Built with TensorFlow and OpenAI Gym",
+      {
+        en: "Trained an agent to navigate an environment",
+        de: "Training eines Agenten zur Navigation in einer Umgebung",
+      },
+      {
+        en: "Reward-based learning for decision making",
+        de: "Belohnungsbasiertes Lernen für die Entscheidungsfindung",
+      },
+      {
+        en: "Built with TensorFlow and OpenAI Gym",
+        de: "Aufgebaut mit TensorFlow und OpenAI Gym",
+      },
     ],
     media: {
       type: "video",
@@ -400,18 +694,35 @@ export const projectsData = [
   {
     id: 12,
     slug: "football-data-analysis",
-    project: "Football Data Analysis",
-    title: "Football Data<br />Analysis",
+    project: {
+      en: "Football Data Analysis",
+      de: "Fußball-Datenanalyse",
+    },
+    title: {
+      en: "Football Data<br />Analysis",
+      de: "Fußball-<br />Datenanalyse",
+    },
     category: CATEGORIES.AI_ML,
     year: "2024",
-    role: "Solo project",
+    role: { en: "Solo project", de: "Einzelprojekt" },
     stack: ["Python", "Pandas", "Matplotlib", "Transfermarkt"],
-    description:
-      "Exploration of player statistics, team performance, and trends in football using data visualization and analytical techniques.",
+    description: {
+      en: "Exploration of player statistics, team performance, and trends in football using data visualization and analytical techniques.",
+      de: "Analyse von Spielerstatistiken, Mannschaftsleistung und Trends im Fußball mithilfe von Datenvisualisierung und Analysetechniken.",
+    },
     features: [
-      "Gathered and cleaned data from Transfermarkt",
-      "Insights into player stats, team performance, and football analytics",
-      "Visualized age distribution, performance trends, and valuation metrics",
+      {
+        en: "Gathered and cleaned data from Transfermarkt",
+        de: "Erhebung und Bereinigung von Daten aus Transfermarkt",
+      },
+      {
+        en: "Insights into player stats, team performance, and football analytics",
+        de: "Erkenntnisse zu Spielerstatistiken, Mannschaftsleistung und Fußball-Analytik",
+      },
+      {
+        en: "Visualized age distribution, performance trends, and valuation metrics",
+        de: "Visualisierung von Altersverteilung, Leistungstrends und Bewertungsmetriken",
+      },
     ],
     media: {
       type: "video",
@@ -424,21 +735,47 @@ export const projectsData = [
   {
     id: 13,
     slug: "eventify-up",
-    project: "EventifyUP",
-    title: "EventifyUP<br />Platform",
+    project: {
+      en: "EventifyUP",
+      de: "EventifyUP",
+    },
+    title: {
+      en: "EventifyUP<br />Platform",
+      de: "EventifyUP-<br />Plattform",
+    },
     category: CATEGORIES.SOFTWARE,
     year: "2023",
-    role: "Team of 4",
+    role: { en: "Team of 4", de: "Team aus 4 Personen" },
     stack: ["Laravel", "Angular", "MySQL"],
-    description:
-      "Web-based platform that simplifies event ticketing at the University of Pécs, eliminating paper tickets with a secure digital experience.",
+    description: {
+      en: "Web-based platform that simplifies event ticketing at the University of Pécs, eliminating paper tickets with a secure digital experience.",
+      de: "Webbasierte Plattform, die das Event-Ticketing an der Universität Pécs vereinfacht und Papiertickets durch ein sicheres digitales Erlebnis ersetzt.",
+    },
     features: [
-      "Built with Laravel and Angular",
-      "Unit testing",
-      "Calendar integration to display all events",
-      "Event search functionality",
-      "Admin dashboard with CRUD on users and events",
-      "Responsive and mobile-friendly interface",
+      {
+        en: "Built with Laravel and Angular",
+        de: "Entwickelt mit Laravel und Angular",
+      },
+      {
+        en: "Unit testing",
+        de: "Unit-Tests",
+      },
+      {
+        en: "Calendar integration to display all events",
+        de: "Kalenderintegration zur Anzeige aller Veranstaltungen",
+      },
+      {
+        en: "Event search functionality",
+        de: "Suchfunktion für Veranstaltungen",
+      },
+      {
+        en: "Admin dashboard with CRUD on users and events",
+        de: "Admin-Dashboard mit CRUD-Funktionen für Nutzer und Veranstaltungen",
+      },
+      {
+        en: "Responsive and mobile-friendly interface",
+        de: "Responsive und mobilfreundliche Benutzeroberfläche",
+      },
     ],
     media: {
       type: "image",
@@ -450,20 +787,43 @@ export const projectsData = [
   {
     id: 16,
     slug: "ping-pong-game",
-    project: "Ping Pong Game",
-    title: "Ping Pong<br />Game",
+    project: {
+      en: "Ping Pong Game",
+      de: "Ping-Pong-Spiel",
+    },
+    title: {
+      en: "Ping Pong<br />Game",
+      de: "Ping-Pong-<br />Spiel",
+    },
     category: CATEGORIES.SOFTWARE,
     year: "2022",
-    role: "Team project",
+    role: { en: "Team project", de: "Teamprojekt" },
     stack: ["JavaScript", "Canvas API", "HTML", "CSS"],
-    description:
-      "A web-based Ping Pong game with dynamically loaded modules for modularity and optimized resource loading.",
+    description: {
+      en: "A web-based Ping Pong game with dynamically loaded modules for modularity and optimized resource loading.",
+      de: "Ein webbasiertes Ping-Pong-Spiel mit dynamisch geladenen Modulen für Modularität und optimiertes Laden von Ressourcen.",
+    },
     features: [
-      "Native JavaScript, HTML, and CSS",
-      "Modular OOP architecture for maintainability",
-      "Single-player and multiplayer modes",
-      "requestAnimationFrame for smooth gameplay",
-      "Canvas API with mathematical collision detection",
+      {
+        en: "Native JavaScript, HTML, and CSS",
+        de: "Natives JavaScript, HTML und CSS",
+      },
+      {
+        en: "Modular OOP architecture for maintainability",
+        de: "Modulare OOP-Architektur für bessere Wartbarkeit",
+      },
+      {
+        en: "Single-player and multiplayer modes",
+        de: "Einzelspieler- und Mehrspielermodi",
+      },
+      {
+        en: "requestAnimationFrame for smooth gameplay",
+        de: "requestAnimationFrame für flüssiges Gameplay",
+      },
+      {
+        en: "Canvas API with mathematical collision detection",
+        de: "Canvas-API mit mathematischer Kollisionserkennung",
+      },
     ],
     media: {
       type: "video",
