@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import { projectsData, projectsNav, CATEGORIES } from "./Data";
 import WorkItems from "./WorkItems";
 import WorkModal from "./WorkModal";
+import { trackEvent } from "../../utils/track";
 
 const Works = () => {
   const [active, setActive] = useState(CATEGORIES.ALL);
@@ -12,6 +13,11 @@ const Works = () => {
     if (active === CATEGORIES.ALL) return projectsData;
     return projectsData.filter((p) => p.category === active);
   }, [active]);
+
+  const handleOpen = (item) => {
+    setSelected(item);
+    trackEvent(`project-open-${item.id}`, `Opened: ${item.project}`);
+  };
 
   return (
     <>
@@ -34,7 +40,7 @@ const Works = () => {
 
       <div className="work__container container">
         {filtered.map((item) => (
-          <WorkItems key={item.id} item={item} onOpen={setSelected} />
+          <WorkItems key={item.id} item={item} onOpen={handleOpen} />
         ))}
       </div>
 

@@ -4,6 +4,7 @@ import Data from "./Data";
 import ScrollDown from "./ScrollDown";
 import Info from "../about/Info";
 import CV from "../../assets/Ibrahim-CV.pdf";
+import { trackEvent } from "../../utils/track";
 
 const Home = () => {
   return (
@@ -42,7 +43,7 @@ const Home = () => {
                   </svg>
                 </a>
 
-                <a download="" href={CV} className="button button--flex">
+                <a download="" href={CV} className="button button--flex" onClick={() => trackEvent("cv-download", "CV downloaded from hero")}>
                   Download CV
                   <svg
                     className="button__icon"

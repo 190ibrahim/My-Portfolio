@@ -1,4 +1,5 @@
 import "./footer.css";
+import { trackEvent } from "../../utils/track";
 
 const Footer = () => {
   return (
@@ -34,6 +35,7 @@ const Footer = () => {
             className="home__social-icon"
             target="_blank"
             rel="noreferrer"
+            onClick={() => trackEvent("outbound-email", "Email clicked from footer")}
           >
             <i className="bx bxl-gmail"></i>
           </a>
@@ -43,6 +45,7 @@ const Footer = () => {
             className="home__social-icon"
             target="_blank"
             rel="noreferrer"
+            onClick={() => trackEvent("outbound-linkedin", "LinkedIn clicked from footer")}
           >
             <i className="bx bxl-linkedin"></i>
           </a>
@@ -52,6 +55,7 @@ const Footer = () => {
             className="home__social-icon"
             target="_blank"
             rel="noreferrer"
+            onClick={() => trackEvent("outbound-github", "GitHub clicked from footer")}
           >
             <i className="bx bxl-github"></i>
           </a>

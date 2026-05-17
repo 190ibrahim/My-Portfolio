@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { GitHubCalendar } from "react-github-calendar";
 import "./github.css";
+import { trackEvent } from "../../utils/track";
 
 const USERNAME = "190ibrahim";
 const START_YEAR = 2021;
@@ -70,6 +71,7 @@ const Github = () => {
           target="_blank"
           rel="noreferrer"
           className="button button--flex github__link"
+          onClick={() => trackEvent("outbound-github", "GitHub clicked from activity section")}
         >
           <i className="bx bxl-github"></i>
           View Full Profile

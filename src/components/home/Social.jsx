@@ -1,3 +1,4 @@
+import { trackEvent } from "../../utils/track";
 
 const Social = () => {
   return (
@@ -7,6 +8,7 @@ const Social = () => {
         className="home__social-icon"
         target="_blank"
         rel="noreferrer"
+        onClick={() => trackEvent("outbound-email", "Email clicked from hero")}
       >
         <i className="uil uil-envelope-alt"></i>
       </a>
@@ -15,6 +17,7 @@ const Social = () => {
         className="home__social-icon"
         target="_blank"
         rel="noreferrer"
+        onClick={() => trackEvent("outbound-linkedin", "LinkedIn clicked from hero")}
       >
         <i className="uil uil-linkedin-alt"></i>
       </a>
@@ -23,6 +26,7 @@ const Social = () => {
         className="home__social-icon"
         target="_blank"
         rel="noreferrer"
+        onClick={() => trackEvent("outbound-github", "GitHub clicked from hero")}
       >
         <i className="uil uil-github-alt"></i>
       </a>

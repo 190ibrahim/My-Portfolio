@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./contact.css";
+import { trackEvent } from "../../utils/track";
 
 const Contact = () => {
   const form = useRef();
@@ -27,6 +28,7 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           e.target.reset();
+          trackEvent("contact-form-sent", "Contact form submitted successfully");
           toast.success("Email sent successfully!", {
             position: "top-right",
             autoClose: 5000,
@@ -69,6 +71,7 @@ const Contact = () => {
                 className="contact__button"
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackEvent("outbound-email", "Email clicked from contact card")}
               >
                 Write me{" "}
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
@@ -85,6 +88,7 @@ const Contact = () => {
                 className="contact__button"
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackEvent("outbound-linkedin", "LinkedIn clicked from contact card")}
               >
                 Connect With Me{" "}
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
@@ -102,6 +106,7 @@ const Contact = () => {
                 className="contact__button"
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackEvent("outbound-github", "GitHub clicked from contact card")}
               >
                 See My Work{" "}
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
