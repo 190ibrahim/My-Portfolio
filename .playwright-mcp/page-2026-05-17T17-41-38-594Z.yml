@@ -1,0 +1,621 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - link " Ibrahim" [ref=e5] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=e6]: 
+        - text: Ibrahim
+      - generic [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "Startseite" [ref=e10] [cursor=pointer]:
+              - /url: "#home"
+              - text:  Startseite
+          - listitem [ref=e11]:
+            - link "Ausbildung" [ref=e12] [cursor=pointer]:
+              - /url: "#qualification"
+              - text:  Ausbildung
+          - listitem [ref=e13]:
+            - link "Berufserfahrung" [ref=e14] [cursor=pointer]:
+              - /url: "#experience"
+              - text:  Berufserfahrung
+          - listitem [ref=e15]:
+            - link "Portfolio" [ref=e16] [cursor=pointer]:
+              - /url: "#portfolio"
+              - text:  Portfolio
+          - listitem [ref=e17]:
+            - link "Kenntnisse" [ref=e18] [cursor=pointer]:
+              - /url: "#skills"
+              - text:  Kenntnisse
+          - listitem [ref=e19]:
+            - link "Kontakt" [ref=e20] [cursor=pointer]:
+              - /url: "#contact"
+              - text:  Kontakt
+        - text: 
+      - button "Sprache wechseln" [ref=e21] [cursor=pointer]:
+        - generic [ref=e22]: EN
+        - generic [ref=e23]: DE
+      - text: 
+  - main [ref=e24]:
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - link "" [ref=e29] [cursor=pointer]:
+            - /url: mailto:190ibrahimahmed@gmail.com
+            - generic [ref=e30]: 
+          - link "" [ref=e31] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/ibrahim-ibrahim-937a7823a/
+            - generic [ref=e32]: 
+          - link "" [ref=e33] [cursor=pointer]:
+            - /url: https://github.com/190ibrahim
+            - generic [ref=e34]: 
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - heading "Ich bin Ibrahim" [level=1] [ref=e38]:
+              - generic [ref=e39]:
+                - text: Ich bin Ibrahim
+                - generic [ref=e40]: 👋
+            - heading "MSc-Student für Feldrobotik" [level=3] [ref=e41]
+            - paragraph [ref=e42]: Erasmus-Mundus-Stipendiat, spezialisiert auf Robotik, künstliche Intelligenz und autonome Systeme, erfahren in ROS, Python und maschinellem Lernen, auf der Suche nach einer Forschungs- oder Ingenieursstelle im Bereich der Robotik.
+          - generic [ref=e43]:
+            - generic [ref=e44]:
+              - generic [ref=e45]:
+                - generic [ref=e46]: 
+                - paragraph [ref=e47]: Software-Robotik-Praktikant @ W.I.S. Sicherheit
+              - generic [ref=e48]:
+                - generic [ref=e49]: 
+                - paragraph [ref=e50]: Berlin, Deutschland
+              - generic [ref=e51]:
+                - generic [ref=e52]: 
+                - paragraph [ref=e53]: Offen für einen Umzug
+            - generic [ref=e54]:
+              - link "Hallo sagen" [ref=e55] [cursor=pointer]:
+                - /url: "#contact"
+                - text: Hallo sagen
+                - img [ref=e56]
+              - link "Lebenslauf herunterladen" [ref=e59] [cursor=pointer]:
+                - /url: /My-Portfolio/src/assets/Ibrahim-CV.pdf
+                - text: Lebenslauf herunterladen
+                - img [ref=e60]
+      - link "Nach unten scrollen " [ref=e66] [cursor=pointer]:
+        - /url: "#qualification"
+        - img [ref=e67]
+        - generic [ref=e69]: Nach unten scrollen
+        - generic [ref=e70]: 
+    - generic [ref=e71]:
+      - heading "Ausbildung" [level=2] [ref=e72]
+      - generic [ref=e73]: Mein akademischer Werdegang
+    - generic [ref=e81]:
+      - heading "Berufserfahrung" [level=2] [ref=e82]
+      - generic [ref=e83]: Mein beruflicher Werdegang
+    - generic [ref=e93]:
+      - heading "Portfolio" [level=2] [ref=e94]
+      - generic [ref=e95]: Aktuelle Arbeiten
+      - tablist "Project categories" [ref=e96]:
+        - tab "Alle" [selected] [ref=e97] [cursor=pointer]
+        - tab "Robotik" [ref=e98] [cursor=pointer]
+        - tab "KI / ML" [ref=e99] [cursor=pointer]
+        - tab "Software" [ref=e100] [cursor=pointer]
+      - generic [ref=e101]:
+        - article [ref=e102]:
+          - button "Open details for Lager-Überwachungsroboter" [ref=e103] [cursor=pointer]:
+            - generic "Lager-Überwachungsroboter" [ref=e104]
+            - generic [ref=e105]: Ausgewählt
+          - generic [ref=e106]:
+            - heading "Lager-Überwachungs- roboter" [level=3] [ref=e107]:
+              - text: Lager-Überwachungs-
+              - text: roboter
+            - list "Tech stack" [ref=e108]:
+              - listitem [ref=e109]: ROS
+              - listitem [ref=e110]: YOLOv8
+              - listitem [ref=e111]: ByteTrack
+              - listitem [ref=e112]: Python
+              - listitem [ref=e113]: "+1"
+            - generic [ref=e114]:
+              - button "Details " [ref=e115] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e116]: 
+              - link "Lager-Überwachungsroboter on GitHub" [ref=e117] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/warehouse-surveillance
+                - generic [ref=e118]: 
+                - text: GitHub
+        - article [ref=e119]:
+          - button "Open details for Stereo-Visual-Odometry (KITTI)" [ref=e120] [cursor=pointer]:
+            - generic "Stereo-Visual-Odometry (KITTI)" [ref=e121]
+            - generic [ref=e122]: Ausgewählt
+          - generic [ref=e123]:
+            - heading "Stereo-Visual- Odometry — KITTI" [level=3] [ref=e124]:
+              - text: Stereo-Visual-
+              - text: Odometry — KITTI
+            - list "Tech stack" [ref=e125]:
+              - listitem [ref=e126]: Python
+              - listitem [ref=e127]: OpenCV
+              - listitem [ref=e128]: NumPy
+              - listitem [ref=e129]: KITTI
+            - generic [ref=e130]:
+              - button "Details " [ref=e131] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e132]: 
+              - link "Stereo-Visual-Odometry (KITTI) on GitHub" [ref=e133] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/stereo-visual-odometry-kitti
+                - generic [ref=e134]: 
+                - text: GitHub
+        - article [ref=e135]:
+          - button "Open details for Exploration mit globaler & lokaler Planungsarchitektur" [ref=e136] [cursor=pointer]:
+            - generic "Exploration mit globaler & lokaler Planungsarchitektur" [ref=e137]
+            - generic [ref=e138]: Ausgewählt
+          - generic [ref=e139]:
+            - heading "Exploration — Globale & lokale Planung" [level=3] [ref=e140]:
+              - text: Exploration —
+              - text: Globale & lokale Planung
+            - list "Tech stack" [ref=e141]:
+              - listitem [ref=e142]: ROS
+              - listitem [ref=e143]: Python
+              - listitem [ref=e144]: RRT*
+              - listitem [ref=e145]: DWA
+            - generic [ref=e146]:
+              - button "Details " [ref=e147] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e148]: 
+              - link "Exploration mit globaler & lokaler Planungsarchitektur on GitHub" [ref=e149] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/Exploration_Global_Local_Planning
+                - generic [ref=e150]: 
+                - text: GitHub
+        - article [ref=e151]:
+          - button "Open details for Fahrzeug-Manipulator-System" [ref=e152] [cursor=pointer]:
+            - generic "Fahrzeug-Manipulator-System" [ref=e153]
+            - generic [ref=e154]: Ausgewählt
+          - generic [ref=e155]:
+            - heading "Fahrzeug-Manipulator- System" [level=3] [ref=e156]:
+              - text: Fahrzeug-Manipulator-
+              - text: System
+            - list "Tech stack" [ref=e157]:
+              - listitem [ref=e158]: ROS
+              - listitem [ref=e159]: Behavior Trees
+              - listitem [ref=e160]: ArUco
+              - listitem [ref=e161]: Python
+            - generic [ref=e162]:
+              - button "Details " [ref=e163] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e164]: 
+              - link "Fahrzeug-Manipulator-System on GitHub" [ref=e165] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/Vehicle_Manipulator_System
+                - generic [ref=e166]: 
+                - text: GitHub
+        - article [ref=e167]:
+          - button "Open details for Graph SLAM mit Linien-Features" [ref=e168] [cursor=pointer]:
+            - generic "Graph SLAM mit Linien-Features" [ref=e169]
+            - generic [ref=e170]: Ausgewählt
+          - generic [ref=e171]:
+            - heading "Graph SLAM mit Linien-Features" [level=3] [ref=e172]:
+              - text: Graph SLAM
+              - text: mit Linien-Features
+            - list "Tech stack" [ref=e173]:
+              - listitem [ref=e174]: Python
+              - listitem [ref=e175]: GTSAM
+              - listitem [ref=e176]: LiDAR
+              - listitem [ref=e177]: EKF
+            - generic [ref=e178]:
+              - button "Details " [ref=e179] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e180]: 
+              - link "Graph SLAM mit Linien-Features on GitHub" [ref=e181] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/Graph_SLAM_Line_Features
+                - generic [ref=e182]: 
+                - text: GitHub
+        - article [ref=e183]:
+          - button "Open details for Kartenbasierte Lokalisierung mit EKF" [ref=e184] [cursor=pointer]:
+            - generic "Kartenbasierte Lokalisierung mit EKF" [ref=e185]
+          - generic [ref=e186]:
+            - heading "Kartenbasierte Lokalisierung mit EKF" [level=3] [ref=e187]:
+              - text: Kartenbasierte
+              - text: Lokalisierung mit EKF
+            - list "Tech stack" [ref=e188]:
+              - listitem [ref=e189]: Python
+              - listitem [ref=e190]: NumPy
+              - listitem [ref=e191]: Matplotlib
+            - generic [ref=e192]:
+              - button "Details " [ref=e193] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e194]: 
+              - link "Kartenbasierte Lokalisierung mit EKF on GitHub" [ref=e195] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/Map_Based_Localization_EKF
+                - generic [ref=e196]: 
+                - text: GitHub
+        - article [ref=e197]:
+          - button "Open details for Feature-EKF-SLAM-Lokalisierung" [ref=e198] [cursor=pointer]:
+            - generic "Feature-EKF-SLAM-Lokalisierung" [ref=e199]
+          - generic [ref=e200]:
+            - heading "Feature-EKF-SLAM- Lokalisierung" [level=3] [ref=e201]:
+              - text: Feature-EKF-SLAM-
+              - text: Lokalisierung
+            - list "Tech stack" [ref=e202]:
+              - listitem [ref=e203]: Python
+              - listitem [ref=e204]: NumPy
+              - listitem [ref=e205]: Matplotlib
+              - listitem [ref=e206]: EKF SLAM
+            - generic [ref=e207]:
+              - button "Details " [ref=e208] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e209]: 
+              - link "Feature-EKF-SLAM-Lokalisierung on GitHub" [ref=e210] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/Feature-EKF-Slam-Localization.git
+                - generic [ref=e211]: 
+                - text: GitHub
+        - article [ref=e212]:
+          - button "Open details for Roboterlokalisierung mit Partikelfilter" [ref=e213] [cursor=pointer]:
+            - generic "Roboterlokalisierung mit Partikelfilter" [ref=e214]
+          - generic [ref=e215]:
+            - heading "Partikelfilter- Roboterlokalisierung" [level=3] [ref=e216]:
+              - text: Partikelfilter-
+              - text: Roboterlokalisierung
+            - list "Tech stack" [ref=e217]:
+              - listitem [ref=e218]: Python
+              - listitem [ref=e219]: NumPy
+              - listitem [ref=e220]: Matplotlib
+            - generic [ref=e221]:
+              - button "Details " [ref=e222] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e223]: 
+              - link "Roboterlokalisierung mit Partikelfilter on GitHub" [ref=e224] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/Particl_Filter_Robot_Localization-
+                - generic [ref=e225]: 
+                - text: GitHub
+        - article [ref=e226]:
+          - button "Open details for A*-Pfadplanung" [ref=e227] [cursor=pointer]:
+            - generic "A*-Pfadplanung" [ref=e228]
+          - generic [ref=e229]:
+            - heading "A*- Pfadplanung" [level=3] [ref=e230]:
+              - text: A*-
+              - text: Pfadplanung
+            - list "Tech stack" [ref=e231]:
+              - listitem [ref=e232]: Python
+              - listitem [ref=e233]: A*
+              - listitem [ref=e234]: NumPy
+              - listitem [ref=e235]: Matplotlib
+              - listitem [ref=e236]: "+1"
+            - generic [ref=e237]:
+              - button "Details " [ref=e238] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e239]: 
+              - link "A*-Pfadplanung on GitHub" [ref=e240] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim
+                - generic [ref=e241]: 
+                - text: GitHub
+        - article [ref=e242]:
+          - button "Open details for ArUco-Marker & Augmented Reality" [ref=e243] [cursor=pointer]:
+            - generic "ArUco-Marker & Augmented Reality" [ref=e244]
+          - generic [ref=e245]:
+            - heading "ArUco-Marker & Augmented Reality" [level=3] [ref=e246]:
+              - text: ArUco-Marker
+              - text: "& Augmented Reality"
+            - list "Tech stack" [ref=e247]:
+              - listitem [ref=e248]: C++
+              - listitem [ref=e249]: OpenCV
+              - listitem [ref=e250]: ArUco
+              - listitem [ref=e251]: CMake
+            - generic [ref=e252]:
+              - button "Details " [ref=e253] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e254]: 
+              - link "ArUco-Marker & Augmented Reality on GitHub" [ref=e255] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim
+                - generic [ref=e256]: 
+                - text: GitHub
+        - article [ref=e257]:
+          - button "Open details for RRT- & RRT*-Pfadplanung" [ref=e258] [cursor=pointer]:
+            - generic "RRT- & RRT*-Pfadplanung" [ref=e259]
+          - generic [ref=e260]:
+            - heading "RRT & RRT* Pfadplanung" [level=3] [ref=e261]:
+              - text: RRT & RRT*
+              - text: Pfadplanung
+            - list "Tech stack" [ref=e262]:
+              - listitem [ref=e263]: Python
+              - listitem [ref=e264]: RRT
+              - listitem [ref=e265]: RRT*
+              - listitem [ref=e266]: NumPy
+              - listitem [ref=e267]: "+1"
+            - generic [ref=e268]:
+              - button "Details " [ref=e269] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e270]: 
+              - link "RRT- & RRT*-Pfadplanung on GitHub" [ref=e271] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim
+                - generic [ref=e272]: 
+                - text: GitHub
+        - article [ref=e273]:
+          - button "Open details for Feature-Extraktion & Bildregistrierung" [ref=e274] [cursor=pointer]:
+            - generic "Feature-Extraktion & Bildregistrierung" [ref=e275]
+          - generic [ref=e276]:
+            - heading "Feature-Extraktion & Bildregistrierung" [level=3] [ref=e277]:
+              - text: Feature-Extraktion
+              - text: "& Bildregistrierung"
+            - list "Tech stack" [ref=e278]:
+              - listitem [ref=e279]: Python
+              - listitem [ref=e280]: OpenCV
+              - listitem [ref=e281]: SIFT
+              - listitem [ref=e282]: ORB
+              - listitem [ref=e283]: "+1"
+            - generic [ref=e284]:
+              - button "Details " [ref=e285] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e286]: 
+              - link "Feature-Extraktion & Bildregistrierung on GitHub" [ref=e287] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/Computer_Vision_Feature_Extraction_and_Image_Registration
+                - generic [ref=e288]: 
+                - text: GitHub
+        - article [ref=e289]:
+          - button "Open details for Spärlich annotierte UXO-Segmentierung" [ref=e290] [cursor=pointer]:
+            - img "Spärlich annotierte UXO-Segmentierung" [ref=e291]
+            - generic [ref=e292]: Ausgewählt
+          - generic [ref=e293]:
+            - heading "Spärlich annotierte UXO-Segmentierung" [level=3] [ref=e294]:
+              - text: Spärlich annotierte
+              - text: UXO-Segmentierung
+            - list "Tech stack" [ref=e295]:
+              - listitem [ref=e296]: PyTorch
+              - listitem [ref=e297]: Python
+              - listitem [ref=e298]: Tree Energy Loss
+            - generic [ref=e299]:
+              - button "Details " [ref=e300] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e301]: 
+              - link "Spärlich annotierte UXO-Segmentierung on GitHub" [ref=e302] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/Sparsely_Annotated_UXO_Segmentation
+                - generic [ref=e303]: 
+                - text: GitHub
+        - article [ref=e304]:
+          - button "Open details for MLFFs für Übergangsmetallkomplexe (BSc-Abschlussarbeit)" [ref=e305] [cursor=pointer]:
+            - img "MLFFs für Übergangsmetallkomplexe (BSc-Abschlussarbeit)" [ref=e306]
+            - generic [ref=e307]: Ausgewählt
+          - generic [ref=e308]:
+            - heading "MLFFs für Übergangsmetallkomplexe" [level=3] [ref=e309]:
+              - text: MLFFs für
+              - text: Übergangsmetallkomplexe
+            - list "Tech stack" [ref=e310]:
+              - listitem [ref=e311]: XGBoost
+              - listitem [ref=e312]: Neural Networks
+              - listitem [ref=e313]: Python
+              - listitem [ref=e314]: tmQM
+            - generic [ref=e315]:
+              - button "Details " [ref=e316] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e317]: 
+              - link "MLFFs für Übergangsmetallkomplexe (BSc-Abschlussarbeit) on GitHub" [ref=e318] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/MLFFs_Transition_Metal_Complexes_BSc_Thesis
+                - generic [ref=e319]: 
+                - text: GitHub
+        - article [ref=e320]:
+          - button "Open details for Erklärbare KI (XAI)" [ref=e321] [cursor=pointer]:
+            - img "Erklärbare KI (XAI)" [ref=e322]
+          - generic [ref=e323]:
+            - heading "Erklärbare KI (XAI)" [level=3] [ref=e324]:
+              - text: Erklärbare KI
+              - text: (XAI)
+            - list "Tech stack" [ref=e325]:
+              - listitem [ref=e326]: SHAP
+              - listitem [ref=e327]: LIME
+              - listitem [ref=e328]: Grad-CAM
+              - listitem [ref=e329]: Python
+            - generic [ref=e330]:
+              - button "Details " [ref=e331] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e332]: 
+              - link "Erklärbare KI (XAI) on GitHub" [ref=e333] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/Explainable_AI
+                - generic [ref=e334]: 
+                - text: GitHub
+        - article [ref=e335]:
+          - button "Open details for Reinforcement Learning für Robotik" [ref=e336] [cursor=pointer]:
+            - generic "Reinforcement Learning für Robotik" [ref=e337]
+          - generic [ref=e338]:
+            - heading "Reinforcement Learning für Robotik" [level=3] [ref=e339]:
+              - text: Reinforcement Learning
+              - text: für Robotik
+            - list "Tech stack" [ref=e340]:
+              - listitem [ref=e341]: TensorFlow
+              - listitem [ref=e342]: OpenAI Gym
+              - listitem [ref=e343]: DQN
+            - generic [ref=e344]:
+              - button "Details " [ref=e345] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e346]: 
+              - link "Reinforcement Learning für Robotik on GitHub" [ref=e347] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/Reinforcement_Learning
+                - generic [ref=e348]: 
+                - text: GitHub
+        - article [ref=e349]:
+          - button "Open details for Fußball-Datenanalyse" [ref=e350] [cursor=pointer]:
+            - generic "Fußball-Datenanalyse" [ref=e351]
+          - generic [ref=e352]:
+            - heading "Fußball- Datenanalyse" [level=3] [ref=e353]:
+              - text: Fußball-
+              - text: Datenanalyse
+            - list "Tech stack" [ref=e354]:
+              - listitem [ref=e355]: Python
+              - listitem [ref=e356]: Pandas
+              - listitem [ref=e357]: Matplotlib
+              - listitem [ref=e358]: Transfermarkt
+            - generic [ref=e359]:
+              - button "Details " [ref=e360] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e361]: 
+              - link "Fußball-Datenanalyse on GitHub" [ref=e362] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/Football_data_analysis-
+                - generic [ref=e363]: 
+                - text: GitHub
+        - article [ref=e364]:
+          - button "Open details for EventifyUP" [ref=e365] [cursor=pointer]:
+            - img "EventifyUP" [ref=e366]
+            - generic [ref=e367]: Ausgewählt
+          - generic [ref=e368]:
+            - heading "EventifyUP- Plattform" [level=3] [ref=e369]:
+              - text: EventifyUP-
+              - text: Plattform
+            - list "Tech stack" [ref=e370]:
+              - listitem [ref=e371]: Laravel
+              - listitem [ref=e372]: Angular
+              - listitem [ref=e373]: MySQL
+            - generic [ref=e374]:
+              - button "Details " [ref=e375] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e376]: 
+              - link "EventifyUP on GitHub" [ref=e377] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/EventifyPecs-Angular--Laravel
+                - generic [ref=e378]: 
+                - text: GitHub
+        - article [ref=e379]:
+          - button "Open details for Ping-Pong-Spiel" [ref=e380] [cursor=pointer]:
+            - generic "Ping-Pong-Spiel" [ref=e381]
+          - generic [ref=e382]:
+            - heading "Ping-Pong- Spiel" [level=3] [ref=e383]:
+              - text: Ping-Pong-
+              - text: Spiel
+            - list "Tech stack" [ref=e384]:
+              - listitem [ref=e385]: JavaScript
+              - listitem [ref=e386]: Canvas API
+              - listitem [ref=e387]: HTML
+              - listitem [ref=e388]: CSS
+            - generic [ref=e389]:
+              - button "Details " [ref=e390] [cursor=pointer]:
+                - text: Details
+                - generic [ref=e391]: 
+              - link "Ping-Pong-Spiel on GitHub" [ref=e392] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim/Web-Application-Project
+                - generic [ref=e393]: 
+                - text: GitHub
+    - generic [ref=e394]:
+      - heading "GitHub-Aktivität" [level=2] [ref=e395]
+      - generic [ref=e396]: Ein Einblick in meine Open-Source-Arbeit
+      - generic [ref=e397]:
+        - tablist [ref=e398]:
+          - tab "2026" [selected] [ref=e399] [cursor=pointer]
+          - tab "2025" [ref=e400] [cursor=pointer]
+          - tab "2024" [ref=e401] [cursor=pointer]
+          - tab "2023" [ref=e402] [cursor=pointer]
+          - tab "2022" [ref=e403] [cursor=pointer]
+          - tab "2021" [ref=e404] [cursor=pointer]
+        - article [ref=e406]:
+          - img [ref=e408]
+        - link " Vollständiges Profil ansehen" [ref=e829] [cursor=pointer]:
+          - /url: https://github.com/190ibrahim
+          - generic [ref=e830]: 
+          - text: Vollständiges Profil ansehen
+    - generic [ref=e831]:
+      - heading "Kenntnisse" [level=2] [ref=e832]
+      - generic [ref=e833]: Gruppiert nach Häufigkeit der Nutzung
+      - generic [ref=e834]:
+        - article [ref=e835]:
+          - generic [ref=e836]:
+            - heading "Aktuell im Einsatz" [level=3] [ref=e837]
+            - paragraph [ref=e838]: Aktiv in aktuellen Studien und Projekten
+          - generic [ref=e839]:
+            - generic [ref=e840]: Python
+            - generic [ref=e841]: C++
+            - generic [ref=e842]: ROS
+            - generic [ref=e843]: ROS2
+            - generic [ref=e844]: Stonefish
+            - generic [ref=e845]: Gazebo
+            - generic [ref=e846]: RViz
+            - generic [ref=e847]: Motion Planning
+            - generic [ref=e848]: SLAM & Localization
+            - generic [ref=e849]: PyTorch
+            - generic [ref=e850]: TensorFlow
+            - generic [ref=e851]: Matlab
+            - generic [ref=e852]: Git
+            - generic [ref=e853]: GitHub
+        - article [ref=e854]:
+          - generic [ref=e855]:
+            - heading "Gut beherrscht" [level=3] [ref=e856]
+            - paragraph [ref=e857]: Solide Arbeitskenntnisse — sofort einsatzbereit
+          - generic [ref=e858]:
+            - generic [ref=e859]: JavaScript
+            - generic [ref=e860]: SQL
+            - generic [ref=e861]: MySQL
+        - article [ref=e862]:
+          - generic [ref=e863]:
+            - heading "Vertraut mit" [level=3] [ref=e864]
+            - paragraph [ref=e865]: In früheren Projekten genutzt, Auffrischung nötig
+          - generic [ref=e866]:
+            - generic [ref=e867]: PHP
+            - generic [ref=e868]: Laravel
+            - generic [ref=e869]: React
+            - generic [ref=e870]: Angular
+            - generic [ref=e871]: MSSQL
+            - generic [ref=e872]: MongoDB
+            - generic [ref=e873]: Heroku
+            - generic [ref=e874]: CI / CD
+    - generic [ref=e875]:
+      - heading "Kontakt aufnehmen" [level=2] [ref=e876]
+      - generic [ref=e877]: Kontaktiere mich
+      - generic [ref=e878]:
+        - generic [ref=e879]:
+          - heading "Sprich mich an" [level=3] [ref=e880]
+          - generic [ref=e881]:
+            - generic [ref=e882]:
+              - generic [ref=e883]: 
+              - heading "E-Mail" [level=3] [ref=e884]
+              - generic [ref=e885]: 190ibrahimahmed@gmail.com
+              - link "Schreib mir " [ref=e886] [cursor=pointer]:
+                - /url: mailto:190ibrahimahmed@gmail.com
+                - text: Schreib mir
+                - generic [ref=e887]: 
+            - generic [ref=e888]:
+              - generic [ref=e889]: 
+              - heading "LinkedIn" [level=3] [ref=e890]
+              - generic [ref=e891]: Ibrahim Ibrahim
+              - link "Vernetze dich mit mir " [ref=e892] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/ibrahim-ibrahim-937a7823a/
+                - text: Vernetze dich mit mir
+                - generic [ref=e893]: 
+            - generic [ref=e894]:
+              - generic [ref=e895]: 
+              - heading "GitHub" [level=3] [ref=e896]
+              - generic [ref=e897]: 190ibrahim
+              - link "Meine Arbeit ansehen " [ref=e898] [cursor=pointer]:
+                - /url: https://github.com/190ibrahim
+                - text: Meine Arbeit ansehen
+                - generic [ref=e899]: 
+        - generic [ref=e900]:
+          - heading "Hast du etwas zu sagen?" [level=3] [ref=e901]
+          - generic [ref=e902]:
+            - generic [ref=e903]:
+              - generic [ref=e904]: Name
+              - textbox "Trage deinen Namen ein" [ref=e905]
+            - generic [ref=e906]:
+              - generic [ref=e907]: E-Mail
+              - textbox "Trage deine E-Mail-Adresse ein" [ref=e908]
+            - generic [ref=e909]:
+              - generic [ref=e910]: Nachricht
+              - textbox "Schreibe deine Nachricht" [ref=e911]
+            - button "Nachricht senden" [ref=e913] [cursor=pointer]:
+              - text: Nachricht senden
+              - img [ref=e914]
+  - contentinfo [ref=e917]:
+    - generic [ref=e918]:
+      - heading " Ibrahim" [level=1] [ref=e919]:
+        - generic [ref=e920]: 
+        - text: Ibrahim
+      - list [ref=e921]:
+        - listitem [ref=e922]:
+          - link "Berufserfahrung" [ref=e923] [cursor=pointer]:
+            - /url: "#experience"
+        - listitem [ref=e924]:
+          - link "Projects" [ref=e925] [cursor=pointer]:
+            - /url: "#portfolio"
+        - listitem [ref=e926]:
+          - link "Skills" [ref=e927] [cursor=pointer]:
+            - /url: "#skills"
+      - generic [ref=e928]:
+        - link "" [ref=e929] [cursor=pointer]:
+          - /url: mailto:190ibrahimahmed@gmail.com
+          - generic [ref=e930]: 
+        - link "" [ref=e931] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/ibrahim-ibrahim-937a7823a/
+          - generic [ref=e932]: 
+        - link "" [ref=e933] [cursor=pointer]:
+          - /url: https://github.com/190ibrahim
+          - generic [ref=e934]: 
+      - generic [ref=e935]: © Alle Rechte vorbehalten
+  - button "" [ref=e936] [cursor=pointer]:
+    - generic [ref=e937]: 
