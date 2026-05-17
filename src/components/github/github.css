@@ -57,6 +57,29 @@
   overflow-x: auto;
   display: flex;
   justify-content: center;
+  scrollbar-width: thin;
+}
+
+.github__chart-wrap::-webkit-scrollbar {
+  height: 4px;
+}
+
+.github__chart-wrap::-webkit-scrollbar-thumb {
+  background: var(--title-color);
+  border-radius: 999px;
+  opacity: 0.6;
+}
+
+/* Phones */
+@media screen and (max-width: 576px) {
+  .github__chart-wrap {
+    padding: 0.85rem;
+  }
+
+  /* Hide the Less / More color legend on phones — keep the count text */
+  .github__chart-wrap .react-activity-calendar__legend-colors {
+    display: none !important;
+  }
 }
 
 .github__link {

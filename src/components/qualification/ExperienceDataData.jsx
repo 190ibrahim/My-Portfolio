@@ -36,7 +36,10 @@ let ExperienceData = [
         de: "Konfiguration der TURN-Server-Integration für robuste Peer-to-Peer-Video- und Steuerkanäle über Netzwerke hinweg",
       },
     ],
-    date: "Feb 2026 - Present",
+    date: {
+      en: "Feb 2026 - Present",
+      de: "Feb. 2026 – Heute",
+    },
   },
   {
     id: 2,
@@ -67,7 +70,10 @@ let ExperienceData = [
         de: "Integration von Grad-CAM und Feature-Attribution-Maps zur Erklärung der Modellvorhersagen und Identifikation der für die Anomalieerkennung relevanten Merkmale",
       },
     ],
-    date: "July 2025 - October 2025",
+    date: {
+      en: "July 2025 - October 2025",
+      de: "Juli 2025 – Oktober 2025",
+    },
   },
   {
     id: 3,
@@ -98,7 +104,10 @@ let ExperienceData = [
         de: "Aufbau statistischer Modelle und Datenvisualisierungen zur Gewinnung und Vermittlung umsetzbarer Erkenntnisse aus komplexen Datensätzen",
       },
     ],
-    date: "October 2023 - April 2024",
+    date: {
+      en: "October 2023 - April 2024",
+      de: "Oktober 2023 – April 2024",
+    },
   },
   {
     id: 4,
@@ -121,7 +130,10 @@ let ExperienceData = [
         de: "Betreuung einer Kohorte neuer internationaler Stipendium-Hungaricum-Studierender, einschließlich Unterstützung beim akademischen Onboarding, bei administrativen Prozessen und bei der Integration in das Universitätsleben",
       },
     ],
-    date: "August 2022 - August 2023",
+    date: {
+      en: "August 2022 - August 2023",
+      de: "August 2022 – August 2023",
+    },
   },
 ];
 

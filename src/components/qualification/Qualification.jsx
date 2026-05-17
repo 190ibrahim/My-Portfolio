@@ -54,7 +54,7 @@ const Qualification = () => {
                 {EducationData.map((element) => (
                   <VerticalTimelineElement
                     key={element.id}
-                    date={element.date}
+                    date={tr(element.date, lang)}
                     dateClassName="qualification__data"
                     icon={schoolIcon.icon}
                     iconStyle={schoolIcon.iconStyle}
@@ -110,7 +110,7 @@ const Qualification = () => {
                 {ExperienceData.map((element) => (
                   <VerticalTimelineElement
                     key={element.id}
-                    date={element.date}
+                    date={tr(element.date, lang)}
                     dateClassName="qualification__data"
                     icon={workIcon.icon}
                     iconStyle={workIcon.iconStyle}

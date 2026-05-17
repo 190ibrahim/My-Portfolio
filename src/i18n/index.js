@@ -16,7 +16,9 @@ i18n
     supportedLngs: ["en", "de"],
     interpolation: { escapeValue: false },
     detection: {
-      order: ["localStorage", "navigator"],
+      // Only honor an explicit user choice; ignore browser language so
+      // first-time visitors always start in English.
+      order: ["localStorage"],
       caches: ["localStorage"],
       lookupLocalStorage: "lang",
     },

@@ -36,7 +36,10 @@ let EducationData = [
         de: "Mit dem renommierten Erasmus Mundus Joint Master Scholarship ausgezeichnet, das einer hochselektiven Kohorte aus einem globalen Bewerberpool verliehen wird",
       },
     ],
-    date: "September 2024 - Present",
+    date: {
+      en: "September 2024 - Present",
+      de: "September 2024 – Heute",
+    },
   },
   {
     id: 2,
@@ -63,7 +66,10 @@ let EducationData = [
         de: "Bachelorabschluss in Informatik mit fundierten Kenntnissen in Algorithmen, Datenstrukturen, Softwaretechnik und angewandter Mathematik — finanziert durch das Stipendium Hungaricum, das für herausragende akademische Leistungen vergeben wird",
       },
     ],
-    date: "August 2021 - June 2024",
+    date: {
+      en: "August 2021 - June 2024",
+      de: "August 2021 – Juni 2024",
+    },
   },
 ];
 
