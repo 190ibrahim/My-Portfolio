@@ -137,13 +137,13 @@ const Contact = () => {
             </div>
 
             <div className="contact__form-div contact__form-area">
-              <label className="contact__form-tag">Subject</label>
+              <label className="contact__form-tag">Message</label>
               <textarea
                 name="content"
                 cols="30"
                 rows="10"
                 className="contact__form-input"
-                placeholder="Write your subject"
+                placeholder="Write your message"
                 required
               ></textarea>
             </div>

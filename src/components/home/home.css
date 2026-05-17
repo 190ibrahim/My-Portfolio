@@ -31,7 +31,7 @@
 }
 
 .home__title {
-  font-size: 2.7rem;
+  font-size: 3.2rem;
   margin-bottom: var(--mb-0-25);
 }
 
@@ -99,6 +99,8 @@
   max-width: 720px;
   line-height: 1.6;
   margin-bottom: var(--mb-3);
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .home__buttons {

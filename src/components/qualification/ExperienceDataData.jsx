@@ -22,9 +22,8 @@ let ExperienceData = [
     link: "https://marble.eu/headquarters-2/",
     description: [
       "Developed and benchmarked visual anomaly detection models (EfficientAD, PatchCore, Autoencoder U-Net, YOLO) on offshore and wind-turbine inspection datasets",
-      "Implemented synthetic anomaly generation pipelines to expand and diversify training data to improve model robustness",
-      "Integrated Grad-CAM and feature attribution maps to enhance model interpretability and communicate decisions to stakeholders",
-      "Conducted benchmarking and literature review of state-of-the-art anomaly detection and explainable AI methods",
+      "Generated synthetic anomaly dataset to augment training data to improve the model",
+      "Integrated Grad-CAM and feature attribution maps to explain the model predictions and identify features contributing to anomaly detection",
     ],
     date: "July 2025 - October 2025",
   },
