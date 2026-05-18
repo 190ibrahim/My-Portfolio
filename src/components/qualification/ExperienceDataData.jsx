@@ -32,8 +32,8 @@ let ExperienceData = [
         de: "Entwurf einer Kommunikationsarchitektur mit geringer Latenz auf Basis von WebRTC, WebSockets und NATS für zuverlässige Roboter-Teleoperation",
       },
       {
-        en: "Configuring TURN server integration to enable robust peer-to-peer video and control channels across networks",
-        de: "Konfiguration der TURN-Server-Integration für robuste Peer-to-Peer-Video- und Steuerkanäle über Netzwerke hinweg",
+        en: "Integrating a TURN server to enable peer-to-peer video and control channels across networks",
+        de: "Integration eines TURN-Servers für Peer-to-Peer-Video- und Steuerkanäle über Netzwerke hinweg",
       },
     ],
     date: {
@@ -92,16 +92,16 @@ let ExperienceData = [
     link: "https://www.datelite.hu/",
     description: [
       {
-        en: "Designed and executed end-to-end ETL pipelines using Python for large-scale earth observation data processing",
-        de: "Entwurf und Ausführung von End-to-End-ETL-Pipelines mit Python zur Verarbeitung großer Erdbeobachtungsdaten",
+        en: "Developed ETL pipelines using Python for large-scale earth observation data processing",
+        de: "Entwicklung von ETL-Pipelines mit Python zur Verarbeitung von Erdbeobachtungsdaten im großen Maßstab",
       },
       {
         en: "Applied piecewise regression, the Kruskal algorithm, and discrete optimization techniques for geospatial data analysis",
         de: "Anwendung von stückweiser Regression, Kruskal-Algorithmus und Methoden der diskreten Optimierung für die Analyse von Geodaten",
       },
       {
-        en: "Built statistical models and data visualizations to extract and communicate actionable insights from complex datasets",
-        de: "Aufbau statistischer Modelle und Datenvisualisierungen zur Gewinnung und Vermittlung umsetzbarer Erkenntnisse aus komplexen Datensätzen",
+        en: "Built statistical models and data visualizations to extract insights from complex datasets",
+        de: "Aufbau statistischer Modelle und Datenvisualisierungen zur Gewinnung von Erkenntnissen aus komplexen Datensätzen",
       },
     ],
     date: {
@@ -126,8 +126,8 @@ let ExperienceData = [
     link: "https://shmentor.hu/",
     description: [
       {
-        en: "Mentored a cohort of incoming international Stipendium Hungaricum students, guiding them through academic onboarding, administrative processes, and integration into university life",
-        de: "Betreuung einer Kohorte neuer internationaler Stipendium-Hungaricum-Studierender, einschließlich Unterstützung beim akademischen Onboarding, bei administrativen Prozessen und bei der Integration in das Universitätsleben",
+        en: "Welcomed international students to the university and provided up-to-date information about their studies and administrative tasks.",
+        de: "Internationale Studierende an der Universität begrüßt und mit aktuellen Informationen zu ihrem Studium und administrativen Aufgaben versorgt.",
       },
     ],
     date: {

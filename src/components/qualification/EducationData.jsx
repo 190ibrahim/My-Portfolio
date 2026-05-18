@@ -20,20 +20,20 @@ let EducationData = [
     },
     description: [
       {
-        en: "Completed two semesters at the University of Girona, building deep expertise in land and marine field robotics fundamentals",
-        de: "Zwei Semester an der Universität Girona absolviert und fundierte Expertise in den Grundlagen der Land- und Meeresrobotik aufgebaut",
+        en: "A prestigious, highly intensive and deeply specialized scholarship for students to pursue master's at multiple European universities",
+        de: "Ein renommiertes, hochintensives und stark spezialisiertes Stipendium, das Studierenden ermöglicht, Masterprogramme an mehreren europäischen Universitäten zu absolvieren",
       },
       {
-        en: "Specialized in multi-robot systems and UAVs during the third semester at the University of Zagreb",
-        de: "Im dritten Semester an der Universität Zagreb auf Multirobotersysteme und unbemannte Luftfahrzeuge (UAVs) spezialisiert",
+        en: "The first two semesters in Girona provide a solid foundation in field robotics, focusing on land and marine robots.",
+        de: "Die ersten zwei Semester in Girona bieten ein solides Fundament in der Feldrobotik mit Schwerpunkt auf Land- und Meeresrobotern.",
       },
       {
-        en: "Conducting master's thesis research in Berlin, Germany, integrating academic work with a hands-on robotics internship at W.I.S. Sicherheit",
-        de: "Master-Thesis-Forschung in Berlin, Deutschland, in Kombination mit einem praktischen Robotik-Praktikum bei W.I.S. Sicherheit",
+        en: "In the third semester, specializing in multiple robots and aerial vehicles at the University of Zagreb.",
+        de: "Im dritten Semester Spezialisierung auf Multiroboter- und Luftfahrtsysteme an der Universität Zagreb.",
       },
       {
-        en: "Awarded the prestigious Erasmus Mundus Joint Master Scholarship, granted to a highly selective cohort from a global applicant pool",
-        de: "Mit dem renommierten Erasmus Mundus Joint Master Scholarship ausgezeichnet, das einer hochselektiven Kohorte aus einem globalen Bewerberpool verliehen wird",
+        en: "The final semester is a master's thesis conducted in Berlin, Germany, carried out in conjunction with a robotics internship at W.I.S. Sicherheit.",
+        de: "Das letzte Semester ist die Master-Thesis in Berlin, Deutschland, durchgeführt in Verbindung mit einem Robotik-Praktikum bei W.I.S. Sicherheit.",
       },
     ],
     date: {
@@ -58,7 +58,7 @@ let EducationData = [
     link: "https://www.ttk.pte.hu/en/admission/english-degree-programs/bsc-study-programs/computer-science-bsc/",
     scholarship: {
       en: "Stipendium Hungaricum Scholarship",
-      de: "Stipendium Hungaricum",
+      de: "Stipendium Hungaricum Scholarship",
     },
     description: [
       {
