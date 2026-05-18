@@ -74,7 +74,7 @@ export const projectsData = [
     },
     category: CATEGORIES.ROBOTICS,
     year: "2025",
-    role: { en: "Solo project", de: "Einzelprojekt" },
+    role: { en: "Team of 3", de: "Team aus 3 Personen" },
     stack: ["Python", "OpenCV", "NumPy", "KITTI"],
     description: {
       en: "A stereo visual odometry pipeline that estimates camera motion and reconstructs sparse 3D points from KITTI stereo sequences.",
@@ -546,7 +546,7 @@ export const projectsData = [
     },
     category: CATEGORIES.AI_ML,
     year: "2025",
-    role: { en: "Solo project", de: "Einzelprojekt" },
+    role: { en: "Team of 3", de: "Team aus 3 Personen" },
     stack: ["PyTorch", "Python", "Tree Energy Loss"],
     description: {
       en: "Weakly supervised semantic segmentation for detecting unexploded ordnance (UXO) using limited pixel annotations.",
@@ -665,7 +665,7 @@ export const projectsData = [
     },
     category: CATEGORIES.AI_ML,
     year: "2024",
-    role: { en: "Solo project", de: "Einzelprojekt" },
+    role: { en: "Team of 2", de: "Team aus 2 Personen" },
     stack: ["TensorFlow", "OpenAI Gym", "DQN"],
     description: {
       en: "Deep Q-Learning (DQN) and Policy Gradient methods applied to robotic control.",
@@ -782,7 +782,6 @@ export const projectsData = [
       src: "/media/projects/eventify-up.jpeg",
     },
     repository: "https://github.com/190ibrahim/EventifyPecs-Angular--Laravel",
-    featured: true,
   },
   {
     id: 16,
