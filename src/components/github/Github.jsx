@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { GitHubCalendar } from "react-github-calendar";
 import "./github.css";
@@ -12,14 +12,36 @@ const YEARS = Array.from(
   (_, i) => currentYear - i
 );
 
+const getCalendarSizing = () => {
+  if (typeof window === "undefined") {
+    return { blockSize: 12, blockMargin: 4, fontSize: 14 };
+  }
+
+  if (window.innerWidth <= 992 && window.innerWidth > 576) {
+    return { blockSize: 10, blockMargin: 3, fontSize: 12 };
+  }
+
+  return { blockSize: 12, blockMargin: 4, fontSize: 14 };
+};
+
 const Github = () => {
   const { t, i18n } = useTranslation();
   const isDe = i18n.language?.startsWith("de");
   // null = default rolling "last year" view; otherwise a specific calendar year
   const [year, setYear] = useState(null);
+  const [calendarSizing, setCalendarSizing] = useState(getCalendarSizing);
   const activeYear = year ?? currentYear;
   const calendarYear = year ?? "last";
   const fallbackYear = year ?? currentYear;
+
+  useEffect(() => {
+    const handleResize = () => setCalendarSizing(getCalendarSizing());
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const calendarLabels = isDe
     ? {
@@ -60,9 +82,9 @@ const Github = () => {
             year={calendarYear}
             colorScheme="light"
             showWeekdayLabels
-            blockSize={12}
-            blockMargin={4}
-            fontSize={14}
+            blockSize={calendarSizing.blockSize}
+            blockMargin={calendarSizing.blockMargin}
+            fontSize={calendarSizing.fontSize}
             errorMessage={isDe ? "Keine GitHub-Aktivität für dieses Jahr." : "No GitHub activity for this year."}
             labels={calendarLabels}
             transformData={(data) => {

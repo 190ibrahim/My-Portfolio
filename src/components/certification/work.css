@@ -38,6 +38,21 @@
   max-width: 980px;
 }
 
+/* Center project grid on narrow tablets where the 480px max-width is narrower than the viewport */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .work__container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* If the last card is alone in its row (odd total), center it across both columns */
+.work__container > .work__card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: calc(50% - 1rem);
+  justify-self: center;
+}
+
 /*=============== CARD ===============*/
 .work__card {
   display: flex;

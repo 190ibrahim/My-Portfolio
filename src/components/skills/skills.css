@@ -6,6 +6,14 @@
   max-width: 760px;
 }
 
+/* Center skills card stack on tablets where max-width is narrower than the viewport */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .skills__container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /*=============== CARD ===============*/
 .skills__card {
   background-color: var(--container-color);
