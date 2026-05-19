@@ -46,11 +46,13 @@
   }
 }
 
-/* If the last card is alone in its row (odd total), center it across both columns */
-.work__container > .work__card:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  max-width: calc(50% - 1rem);
-  justify-self: center;
+/* If the last card is alone in its two-column row, center it across both columns */
+@media screen and (min-width: 769px) {
+  .work__container > .work__card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 1rem);
+    justify-self: center;
+  }
 }
 
 /*=============== CARD ===============*/
@@ -433,6 +435,12 @@
   }
   .work__modal-body {
     padding: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .work__container {
+    max-width: none;
   }
 }
 

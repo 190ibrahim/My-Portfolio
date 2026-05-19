@@ -7,7 +7,7 @@
 }
 
 /* Center skills card stack on tablets where max-width is narrower than the viewport */
-@media screen and (min-width: 769px) and (max-width: 992px) {
+@media screen and (min-width: 577px) and (max-width: 992px) {
   .skills__container {
     margin-left: auto;
     margin-right: auto;
@@ -82,6 +82,12 @@
   }
   .skills__card {
     padding: 1.25rem 1.25rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .skills__container {
+    max-width: none;
   }
 }
 
