@@ -110,15 +110,17 @@ const WorkModal = ({ item, onClose }) => {
           </ul>
 
           <div className="work__modal-actions">
-            <a
-              href={item.repository}
-              className="work__btn work__btn--primary"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="uil uil-github-alt"></i>
-              {t("work.viewOnGithub")}
-            </a>
+            {item.repository && (
+              <a
+                href={item.repository}
+                className="work__btn work__btn--primary"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i className="uil uil-github-alt"></i>
+                {t("work.viewOnGithub")}
+              </a>
+            )}
             {item.demoURL && (
               <a
                 href={item.demoURL}

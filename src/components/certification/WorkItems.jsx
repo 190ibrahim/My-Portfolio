@@ -53,16 +53,18 @@ const WorkItems = ({ item, onOpen }) => {
             {t("work.details")}
             <i className="uil uil-arrow-right"></i>
           </button>
-          <a
-            href={item.repository}
-            className="work__btn work__btn--ghost"
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`${projectName} on GitHub`}
-          >
-            <i className="uil uil-github-alt"></i>
-            {t("work.github")}
-          </a>
+          {item.repository && (
+            <a
+              href={item.repository}
+              className="work__btn work__btn--ghost"
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${projectName} on GitHub`}
+            >
+              <i className="uil uil-github-alt"></i>
+              {t("work.github")}
+            </a>
+          )}
         </div>
       </div>
     </article>

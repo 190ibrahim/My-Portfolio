@@ -62,6 +62,96 @@ export const projectsData = [
     featured: true,
   },
   {
+    id: 21,
+    slug: "crazyflie-swarm-mission",
+    project: {
+      en: "Crazyflie Swarm Coordination",
+      de: "Crazyflie-Schwarmkoordination",
+    },
+    title: {
+      en: "Crazyflie Swarm<br />Coordination",
+      de: "Crazyflie-Schwarm-<br />koordination",
+    },
+    category: CATEGORIES.ROBOTICS,
+    year: "2026",
+    role: { en: "Team of 5", de: "Team aus 5 Personen" },
+    stack: ["ROS2", "Gazebo", "Crazyflie", "Python", "Consensus"],
+    description: {
+      en: "Multi-robot Crazyflie system combining consensus-based formation control with auction-based task allocation for synchronized single-robot and multi-robot missions.",
+      de: "Multi-Roboter-Crazyflie-System, das konsensbasierte Formationsregelung mit auktionsbasierter Aufgabenverteilung für synchronisierte Einzel- und Mehrroboter-Missionen kombiniert.",
+    },
+    features: [
+      {
+        en: "Implemented rendezvous, line, square, and triangle formations with collision-aware separation forces",
+        de: "Rendezvous-, Linien-, Quadrat- und Dreiecksformationen mit kollisionsbewussten Separationskräften implementiert",
+      },
+      {
+        en: "Compared fully connected, star, and ring communication topologies in ROS2/Gazebo simulation",
+        de: "Vollvermaschte, Stern- und Ring-Kommunikationstopologien in ROS2/Gazebo verglichen",
+      },
+      {
+        en: "Built an auction scheduler for mission graphs with task dependencies, wait states, and multi-robot tasks",
+        de: "Auktionsbasierten Scheduler für Missionsgraphen mit Abhängigkeiten, Wartezuständen und Mehrroboter-Aufgaben entwickelt",
+      },
+      {
+        en: "Executed planned missions through a ROS2 state-machine node publishing velocity commands to four Crazyflies",
+        de: "Geplante Missionen über einen ROS2-Zustandsautomaten ausgeführt, der Geschwindigkeitsbefehle an vier Crazyflies publiziert",
+      },
+      {
+        en: "Validated behavior in simulation and transferred formation control to real Crazyflie flight tests",
+        de: "Verhalten in der Simulation validiert und Formationsregelung auf reale Crazyflie-Flugtests übertragen",
+      },
+    ],
+    media: {
+      type: "video",
+      src: "/media/projects/crazyflie-swarm-mission.mp4",
+    },
+    featured: true,
+  },
+  {
+    id: 22,
+    slug: "multi-robot-flocking-obstacle-avoidance",
+    project: {
+      en: "Multi-Robot Flocking and Obstacle Avoidance Simulation",
+      de: "Multi-Roboter-Flocking und Hindernisvermeidung",
+    },
+    title: {
+      en: "Multi-Robot Flocking<br />& Obstacle Avoidance",
+      de: "Multi-Roboter-Flocking<br />& Hindernisvermeidung",
+    },
+    category: CATEGORIES.ROBOTICS,
+    year: "2025",
+    role: { en: "Team of 5", de: "Team aus 5 Personen" },
+    stack: ["ROS2", "Python", "Boids", "Obstacle Avoidance"],
+    description: {
+      en: "ROS2 Stage simulation of a multi-robot flocking controller using cohesion, separation, and alignment behaviors with obstacle avoidance in maze-like maps.",
+      de: "ROS2-Stage-Simulation eines Multi-Roboter-Flocking-Reglers mit Kohäsion, Separation und Alignment sowie Hindernisvermeidung in labyrinthartigen Karten.",
+    },
+    features: [
+      {
+        en: "Implemented distributed flocking behavior with cohesion, separation, and alignment terms",
+        de: "Verteiltes Flocking-Verhalten mit Kohäsions-, Separations- und Alignment-Anteilen implementiert",
+      },
+      {
+        en: "Added obstacle and wall avoidance so the robot group can move through constrained maze maps",
+        de: "Hindernis- und Wandvermeidung ergänzt, damit die Robotergruppe durch eingeschränkte Labyrinthkarten navigieren kann",
+      },
+      {
+        en: "Tested map scenarios with 10 robots in Stage and visualized the group motion in real time",
+        de: "Kartenszenarien mit 10 Robotern in Stage getestet und die Gruppenbewegung in Echtzeit visualisiert",
+      },
+      {
+        en: "Analyzed parameter effects including cohesion, alignment, separation, field of view, and velocity",
+        de: "Parametereffekte wie Kohäsion, Alignment, Separation, Sichtfeld und Geschwindigkeit analysiert",
+      }
+    ],
+    media: {
+      type: "video",
+      src: "/media/projects/multi-robot-flocking-obstacle-avoidance.mp4",
+    },
+    featured: true,
+  },
+  {
     id: 1,
     slug: "stereo-visual-odometry-kitti",
     project: {
