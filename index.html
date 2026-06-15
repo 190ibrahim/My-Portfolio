@@ -28,25 +28,59 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- UNICONS -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <script>
+      (function () {
+        var key = "portfolioAnalyticsOptOut";
+        var params = new URLSearchParams(window.location.search);
+        var analyticsSetting = params.get("analytics");
+
+        try {
+          if (analyticsSetting === "off") {
+            window.localStorage.setItem(key, "1");
+          } else if (analyticsSetting === "on") {
+            window.localStorage.removeItem(key);
+          }
+
+          if (analyticsSetting === "off" || analyticsSetting === "on") {
+            params.delete("analytics");
+            var cleanQuery = params.toString();
+            var cleanUrl = window.location.pathname + (cleanQuery ? "?" + cleanQuery : "") + window.location.hash;
+            window.history.replaceState(null, "", cleanUrl);
+          }
+
+          window.portfolioAnalyticsDisabled = window.localStorage.getItem(key) === "1";
+        } catch (error) {
+          window.portfolioAnalyticsDisabled = analyticsSetting === "off";
+        }
+      })();
+    </script>
     <!-- Microsoft Clarity (session replay + heatmaps) -->
     <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "wsli25ynhi");
+      if (!window.portfolioAnalyticsDisabled) {
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wsli25ynhi");
+      }
     </script>
 
     <!-- GoatCounter analytics -->
     <script>
-      window.goatcounter = {
-        path: function (p) {
-          return p.replace(/\/index\.html$/, "/").replace(/\/$/, "") || "/";
-        }
-      };
+      if (!window.portfolioAnalyticsDisabled) {
+        window.goatcounter = {
+          path: function (p) {
+            return p.replace(/\/index\.html$/, "/").replace(/\/$/, "") || "/";
+          }
+        };
+
+        var goatCounterScript = document.createElement("script");
+        goatCounterScript.async = true;
+        goatCounterScript.src = "https://gc.zgo.at/count.js";
+        goatCounterScript.dataset.goatcounter = "https://ibrahim-portfolio.goatcounter.com/count";
+        document.head.appendChild(goatCounterScript);
+      }
     </script>
-    <script data-goatcounter="https://ibrahim-portfolio.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
   </head>
   <body>
     <div id="root"></div>
