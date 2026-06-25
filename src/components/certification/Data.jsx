@@ -12,6 +12,41 @@ export const CATEGORIES = {
 // Note: filter labels are localized via i18n in Works.jsx (work.filters.*)
 
 export const projectsData = [
+  // ==================== MASTER'S THESIS (placeholder for QR / poster) ====================
+  // Opened via the URL hash #msc-thesis (see Works.jsx deep-linking).
+  // `hidden: true` keeps it OUT of the portfolio grid until it's ready.
+  // TO PUBLISH LATER: add `media` + `repository`, fill in the real text,
+  // then delete the `hidden: true` line so the card appears in the grid.
+  {
+    id: 23,
+    slug: "msc-thesis",
+    hidden: true,
+    project: {
+      en: "Master's Thesis — MSc IFRoS",
+      de: "Masterarbeit — MSc IFRoS",
+    },
+    title: {
+      en: "Master's Thesis<br />MSc IFRoS",
+      de: "Masterarbeit<br />MSc IFRoS",
+    },
+    category: CATEGORIES.ROBOTICS,
+    year: "2026",
+    role: { en: "Master's Thesis", de: "Masterarbeit" },
+    stack: ["Robotics", "Autonomous Systems", "Machine Learning"],
+    description: {
+      en: "My MSc thesis in Intelligent Field Robotic Systems (IFRoS). Thank you for scanning — the full write-up and demo videos are being prepared and will appear right here soon.",
+      de: "Meine Masterarbeit im Studiengang Intelligent Field Robotic Systems (IFRoS). Danke fürs Scannen — die vollständige Ausarbeitung und Demo-Videos werden vorbereitet und erscheinen in Kürze genau hier.",
+    },
+    features: [
+      {
+        en: "Full description, results, and demo videos coming soon",
+        de: "Vollständige Beschreibung, Ergebnisse und Demo-Videos folgen in Kürze",
+      },
+    ],
+    // No `media` yet → the modal shows a "Demo coming soon" placeholder.
+    // When ready: media: { type: "video", src: "/media/projects/msc-thesis.mp4" }
+  },
+
   // ==================== ROBOTICS ====================
   {
     id: 20,
