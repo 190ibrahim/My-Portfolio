@@ -309,6 +309,10 @@
 
 .work__modal-body {
   padding: 1.75rem 1.75rem 1.5rem;
+  /* On wide screens the body scrolls on its own so the media stays centered
+     and long content (e.g. the thesis) never gets clipped. */
+  max-height: 88vh;
+  overflow-y: auto;
 }
 
 .work__modal-header {
@@ -435,6 +439,10 @@
   }
   .work__modal-body {
     padding: 1.25rem;
+    /* Stacked layout: the whole modal scrolls, so the body must not be a
+       second nested scroll area. */
+    max-height: none;
+    overflow: visible;
   }
 }
 
