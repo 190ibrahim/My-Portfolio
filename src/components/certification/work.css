@@ -421,10 +421,13 @@
     width: 100%;
     max-height: 92dvh;
     border-radius: 1.25rem 1.25rem 0 0;
-    grid-template-columns: 1fr;
-    overflow-y: auto;
+    /* Pin the video at the top; only the body scrolls underneath it. */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
   .work__modal-media {
+    flex-shrink: 0;
     max-height: 40vh;
     border-radius: 1.25rem 1.25rem 0 0;
     overflow: hidden;
@@ -439,10 +442,11 @@
   }
   .work__modal-body {
     padding: 1.25rem;
-    /* Stacked layout: the whole modal scrolls, so the body must not be a
-       second nested scroll area. */
+    /* The body is the only scroll area, so the pinned video stays in view. */
+    flex: 1 1 auto;
+    min-height: 0;
     max-height: none;
-    overflow: visible;
+    overflow-y: auto;
   }
 }
 
