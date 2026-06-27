@@ -12,39 +12,68 @@ export const CATEGORIES = {
 // Note: filter labels are localized via i18n in Works.jsx (work.filters.*)
 
 export const projectsData = [
-  // ==================== MASTER'S THESIS (placeholder for QR / poster) ====================
-  // Opened via the URL hash #msc-thesis (see Works.jsx deep-linking).
-  // `hidden: true` keeps it OUT of the portfolio grid until it's ready.
-  // TO PUBLISH LATER: add `media` + `repository`, fill in the real text,
-  // then delete the `hidden: true` line so the card appears in the grid.
+  // ==================== MASTER'S THESIS (QR / poster target — opened via #msc-thesis) ====================
+  // The poster's QR code links to .../My-Portfolio/#msc-thesis, which opens this
+  // project's modal directly (deep-linking handled in Works.jsx).
   {
     id: 23,
     slug: "msc-thesis",
-    hidden: true,
+    featured: true,
     project: {
-      en: "Master's Thesis — MSc IFRoS",
-      de: "Masterarbeit — MSc IFRoS",
+      en: "Navigation & Control of a Quadruped Robot (MSc Thesis)",
+      de: "Navigation & Steuerung eines Vierbeiner-Roboters (Masterarbeit)",
     },
     title: {
-      en: "Master's Thesis<br />MSc IFRoS",
-      de: "Masterarbeit<br />MSc IFRoS",
+      en: "Quadruped Navigation in<br />Unknown Environments",
+      de: "Vierbeiner-Navigation in<br />unbekannten Umgebungen",
     },
     category: CATEGORIES.ROBOTICS,
     year: "2026",
-    role: { en: "Master's Thesis", de: "Masterarbeit" },
-    stack: ["Robotics", "Autonomous Systems", "Machine Learning"],
+    role: { en: "MSc Thesis (IFRoS)", de: "Masterarbeit (IFRoS)" },
+    stack: [
+      "ROS 2",
+      "Point-LIO SLAM",
+      "NDT Localization",
+      "Hybrid A*",
+      "MPPI",
+      "Unitree Go2",
+      "React + Laravel",
+      "WebRTC / NATS / DTLS",
+    ],
     description: {
-      en: "My MSc thesis in Intelligent Field Robotic Systems (IFRoS). Thank you for scanning — the full write-up and demo videos are being prepared and will appear right here soon.",
-      de: "Meine Masterarbeit im Studiengang Intelligent Field Robotic Systems (IFRoS). Danke fürs Scannen — die vollständige Ausarbeitung und Demo-Videos werden vorbereitet und erscheinen in Kürze genau hier.",
+      en: "An end-to-end navigation and remote-supervision system for a Unitree Go2 EDU quadruped used for indoor inspection and security patrols. A ROS 2 autonomy stack — LiDAR-inertial mapping, map-based localization, planning, control, and autonomous exploration — is paired with a browser platform for authenticated, low-latency teleoperation: live video, telemetry, a live map, and click-to-go navigation goals.",
+      de: "Ein durchgängiges System zur Navigation und Fernüberwachung eines Unitree Go2 EDU Vierbeiner-Roboters für Innenrauminspektion und Sicherheitspatrouillen. Ein ROS-2-Autonomie-Stack — LiDAR-inertiale Kartierung, kartenbasierte Lokalisierung, Planung, Regelung und autonome Exploration — wird mit einer Browser-Plattform für authentifizierte, latenzarme Teleoperation kombiniert: Live-Video, Telemetrie, Live-Karte und Navigationsziele per Klick.",
     },
     features: [
       {
-        en: "Full description, results, and demo videos coming soon",
-        de: "Vollständige Beschreibung, Ergebnisse und Demo-Videos folgen in Kürze",
+        en: "Autonomous mapping with Point-LIO LiDAR-inertial odometry and OctoMap occupancy grids from the sparse Unitree L1 LiDAR",
+        de: "Autonome Kartierung mit Point-LIO LiDAR-inertialer Odometrie und OctoMap-Belegungsgittern aus dem dünn besetzten Unitree-L1-LiDAR",
+      },
+      {
+        en: "Map-based NDT localization adapted to the non-repetitive L1 via scan accumulation and acceptance gates — 0.20 m XY RMSE and 4.0° yaw vs. the Point-LIO reference",
+        de: "Kartenbasierte NDT-Lokalisierung, an das nicht-repetitive L1 angepasst durch Scan-Akkumulation und Akzeptanz-Gates — 0,20 m XY-RMSE und 4,0° Gier gegenüber der Point-LIO-Referenz",
+      },
+      {
+        en: "Goal navigation with Hybrid A* global planning (median 356 ms) and an MPPI local controller (median 34 ms compute)",
+        de: "Zielnavigation mit globaler Hybrid-A*-Planung (Median 356 ms) und einem lokalen MPPI-Regler (Median 34 ms Rechenzeit)",
+      },
+      {
+        en: "Autonomous frontier-based exploration that builds and saves a map for later localization and navigation",
+        de: "Autonome grenzbasierte Exploration, die eine Karte für spätere Lokalisierung und Navigation erstellt und speichert",
+      },
+      {
+        en: "Browser teleoperation platform (React, Laravel, PostgreSQL, NATS, DTLS, WebRTC) with authenticated, exclusive per-robot control and a ~44 ms browser-to-robot round-trip",
+        de: "Browser-Teleoperationsplattform (React, Laravel, PostgreSQL, NATS, DTLS, WebRTC) mit authentifizierter, exklusiver Steuerung pro Roboter und ~44 ms Round-Trip vom Browser zum Roboter",
+      },
+      {
+        en: "Validated end to end on a real Unitree Go2 in an indoor environment, covering mapping, localization, navigation, exploration, and web supervision",
+        de: "Durchgängig auf einem realen Unitree Go2 in einer Innenraumumgebung validiert — Kartierung, Lokalisierung, Navigation, Exploration und Web-Überwachung",
       },
     ],
-    // No `media` yet → the modal shows a "Demo coming soon" placeholder.
-    // When ready: media: { type: "video", src: "/media/projects/msc-thesis.mp4" }
+    media: {
+      type: "video",
+      src: "/media/projects/msc-thesis.mp4",
+    },
   },
 
   // ==================== ROBOTICS ====================
